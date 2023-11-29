@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" 
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+
+            /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navigation links container */
+.nav-link {
+    display: none;
+}
+
+/* Hamburger icon */
+.fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navigation links list */
+.nav-link ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link li {
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for navigation links */
+.nav-link li:hover {
+    background-color: #444;
+}
+
+/* Sliding effect on hover */
+.nav-link ul {
+    position: absolute;
+    background-color: #333;
+    display: none;
+    flex-direction: column;
+}
+
+.nav-link ul.active {
+    display: flex;
+}
+
+.nav-link ul li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-link ul.active li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png"alt="Logo"></a>
+            <div class="nav-link">
+                <i class="fa fa-window-close"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">COURSES</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">BLOGS</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Welcome To"Apna Collage"</h1>
+            <p>Raipur Institute of Technology, Raipur (RIT) was established by the Mahanadi Education Society in the year 1995 with a mandate of augmenting technical and professional education by setting up series of institutions with modern facilities and excellent academicians to realize the vision of Society. The RIT is an unmatched example of superb corporate governance. It has an unparalleled image of an ideal institution as the oldest private management and technical institution.</p>
+            <a href="" class="btn">Visit us to know more</a>
+        </div>
+    </section>
+</body>
+</html>
