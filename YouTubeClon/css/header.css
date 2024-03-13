@@ -1,0 +1,147 @@
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* padding-bottom: 100px; */
+    background-color: white;
+    border: 1px solid rgb(215, 215, 215);
+    z-index: 100;
+}
+
+.left-section{
+    /* background-color: blueviolet; */
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+.menuButton{
+    margin: 0px 23px;
+    background-color: transparent;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+}
+.menu{
+   height: 22px;
+    padding: 10px;
+}
+.menuButton:hover{
+    background-color: rgb(231, 231, 231);
+    
+    
+}
+.youtube-logo{
+    /* height: 25px; */
+    width: 80px;
+}
+
+
+/* ----------------------------------------------- */
+.middle-section{
+    /* background-color: rgb(105, 105, 255); */
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    padding: 12px;
+    height: 40px;
+    width: 0;
+    border-radius: 50px 0px 0px 50px;
+    border: 1px solid rgb(197, 197, 197);
+    flex: 1;
+    font-size: 16px;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.05);
+}
+.search::placeholder{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.search-btn{
+    width: 60px;
+    height: 40px;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 0px 50px 50px 0px;
+    background-color: transparent;
+    margin-left: -1px;
+    cursor: pointer;
+}
+.search-btn:hover{
+    background-color: rgb(241, 241, 241);
+}
+.mike-btn{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(197, 197, 197);
+    margin-left: 15px;
+    background-color:whitesmoke ;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.mike-btn:hover{
+    background-color: rgb(220, 220, 220);
+}
+.mike-btn img{
+    width: 25px;
+    align-items: center;
+    margin-top: 5px;
+}
+.search-btn img{
+    width: 23px;
+    margin-top: 5px;
+}
+/* ----------------------------------------------------- */
+.right-section{
+    /* background-color: red; */
+    width: 180px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.create-video{
+    height: 25px;
+}
+.app-icon{
+    height: 16px;
+}
+.bell{
+    height: 23px;
+    /* background-color: blue; */
+    padding: 10px;
+
+}
+
+.bell-container{
+    position: relative;
+}
+.notifications{
+    background-color: red;
+    color: white;
+    border-radius: 40px;
+    border: 2px solid;
+    /* width: fit-content; */
+    font-family: "Roboto", sans-serif;
+    padding: 1px 4px;
+    font-size: 13px;
+    font-weight: 500;
+    position: absolute;
+    top: 4px;
+    right: -2px;
+}
+.profile-picture{
+    width: 32px;
+    border-radius: 50px;
+}

@@ -1,0 +1,107 @@
+
+
+.thumbnail{
+    width: 100%;
+    /* width: 437.30px;
+    height: 236px; */
+    margin-bottom: 8px;
+    position: relative;
+    border-radius: 10px;
+    /* z-index: -1; */
+}
+.thumbnail-row{
+    position: relative;
+}
+.video-time{
+    position: absolute;
+    background-color: black;
+    color: white;
+    right: 5px;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 4px 4px;
+    bottom: 15px;
+    /* z-index: -1; */
+}
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.channel-picture img{
+    width: 40px;
+    border-radius: 50px;
+}
+.channel-info p{
+    vertical-align: top;
+    margin: 0px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.channel-info p:nth-child(1){
+    font-weight: bold;
+}
+.channel-info p:nth-child(2){
+    margin-top: 10px;
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+}
+.channel-info p:nth-child(3){
+    color: rgb(96,96,96);
+    font-size: 12px;
+}
+.video-container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* @media (max-width:1200px) {
+    .video-container-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:770px) {
+    .video-container-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:1200px) {
+    .video-container-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+} */
+
+
+/* Default styles */
+.video-container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Media query for tablets (landscape) */
+  @media only screen and (min-width: 768px)  {
+    .video-container-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Media query for tablets and small laptops (portrait) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    .video-container-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  /* Media query for smartphones */
+  @media only screen and (max-width: 480px) {
+    .video-container-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  

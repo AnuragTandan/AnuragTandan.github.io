@@ -1,0 +1,34 @@
+.side-bar{
+    background-color: #ffffff;
+    width: 200px;
+    /* height: 100px; */
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    /* align-items: center; */
+    margin-right: 80px;
+    z-index: 200;
+}
+
+.home,.explore,.subscriptions,.originals,.yt-music,.library{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* text-align: center; */
+    /* align-items: center; */
+    background-color: rgb(243, 243, 243);
+    padding: 10px;
+    margin-left: 22px;
+    margin-bottom: -5px;
+    margin-top: 10px;
+    display: flex;
+}
+.home-icon,.explore-icon,.subscriptions-icon,.originals-icon,.yt-music-icon,.library-icon{
+    width: 23px;
+}
+.home-txt,.explore-txt,.subscriptions-txt,.originals-txt,.yt-music-txt,.library-txt{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    margin-left: 20px;
+}
