@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Landing Page Slider</title>
+  <style>
+    /* Updated CSS for a fresh look */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f9;
+      overflow: hidden;
+    }
+    .section1 {
+      width: 80vw;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+    }
+    .landing-img, .section1-containt {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    .homeimg {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+    .section1-containt {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+    .section1-slide {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .section1-slide h1 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .section1-slide h3 {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .section1-slide a {
+      margin: 10px;
+      text-decoration: none;
+    }
+    .section1-slide button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      color: #ffffff;
+      background: #007bff;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .section1-slide button:hover {
+      background: #0056b3;
+    }
+    .slide-btn {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    .prev, .next {
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0.8;
+      font-size: 1rem;
+      transition: background 0.3s, opacity 0.3s;
+    }
+    .prev:hover, .next:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .home-divider {
+      margin-top: 20px;
+    }
+    .home-divider img {
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section1">
+    <div class="landing-img">
+      <img src="img/home-servicess.jpg" class="homeimg" alt=""> <!-- Clone of last image -->
+      <img src="img/home-img-index.jpg" class="homeimg" alt="">
+      <img src="img/colleagues-working-together-office.jpg" class="homeimg" alt="">
+      <img src="img/home-img-translator.jpg" class="homeimg" alt="">
+      <img src="img/home-servicess.jpg" class="homeimg" alt="">
+      <img src="img/home-img-index.jpg" class="homeimg" alt=""> <!-- Clone of first image -->
+    </div>
+
+    <div class="section1-containt">
+      <div class="section1-slide">
+        <h1>Seamless Multilingual Support</h1>
+        <h3>Connecting you with experts for smooth communication across borders.</h3>
+        <a href="availableTranslators.html"><button>Find a Translator</button></a>
+        <a href="registration.html"><button class="translatoer-registration-btn">Register as a Translator</button></a>
+      </div>
+      <div class="section1-slide">
+        <h1>Global Translation Services</h1>
+        <h3>Your reliable partner for international communication.</h3>
+        <a href="availableTranslators.html"><button>Explore Translators</button></a>
+        <a href="registration.html"><button class="translatoer-registration-btn">Join as a Translator</button></a>
+      </div>
+      <div class="section1-slide">
+        <h1>Fast and Accurate Translations</h1>
+        <h3>Providing real-time language support for all your needs.</h3>
+        <a href="availableTranslators.html"><button>Find a Translator</button></a>
+        <a href="registration.html"><button class="translatoer-registration-btn">Sign Up as a Translator</button></a>
+      </div>
+      <div class="section1-slide">
+        <h1>Breaking Language Barriers</h1>
+        <h3>Connecting with experts for smooth communication across borders.</h3>
+        <a href="availableTranslators.html"><button>Discover Translators</button></a>
+        <a href="registration.html"><button class="translatoer-registration-btn">Translator Registration</button></a>
+      </div>
+      <div class="section1-slide">
+        <h1>Seamless Multilingual Support</h1>
+        <h3>Connecting you with experts for smooth communication across borders.</h3>
+        <a href="availableTranslators.html"><button>Find a Translator</button></a>
+        <a href="registration.html"><button class="translatoer-registration-btn">Register as a Translator</button></a>
+      </div>
+    </div>
+
+    <div class="slide-btn">
+      <button class="prev" onclick="goPrev()">Prev</button>
+      <button class="next" onclick="goNext()">Next</button>
+    </div>
+
+    <div class="home-divider">
+      <img src="img/triangle-asymmetrical-divider-inverse.png" alt="">
+    </div>
+  </section>
+
+  <script>
+    const imgSlides = document.querySelectorAll(".homeimg");
+    const contentSlides = document.querySelectorAll(".section1-slide");
+    const imgTrack = document.querySelector(".landing-img");
+    const contentTrack = document.querySelector(".section1-containt");
+    const totalSlides = imgSlides.length;
+    let counter = 1;
+
+    // Initial positioning
+    imgTrack.style.transform = `translateX(-${counter * 100}%)`;
+    contentTrack.style.transform = `translateX(-${counter * 100}%)`;
+
+    const goNext = () => {
+      if (counter >= totalSlides - 1) return;
+      counter++;
+      imgTrack.style.transition = "transform 0.5s ease-in-out";
+      contentTrack.style.transition = "transform 0.5s ease-in-out";
+      imgTrack.style.transform = `translateX(-${counter * 100}%)`;
+      contentTrack.style.transform = `translateX(-${counter * 100}%)`;
+
+      imgTrack.addEventListener("transitionend", () => {
+        if (counter === totalSlides - 1) {
+          imgTrack.style.transition = "none";
+          contentTrack.style.transition = "none";
+          counter = 1;
+          imgTrack.style.transform = `translateX(-${counter * 100}%)`;
+          contentTrack.style.transform = `translateX(-${counter * 100}%)`;
+        }
+      });
+    };
+
+    const goPrev = () => {
+      if (counter <= 0) return;
+      counter--;
+      imgTrack.style.transition = "transform 0.5s ease-in-out";
+      contentTrack.style.transition = "transform 0.5s ease-in-out";
+      imgTrack.style.transform = `translateX(-${counter * 100}%)`;
+      contentTrack.style.transform = `translateX(-${counter * 100}%)`;
+
+      imgTrack.addEventListener("transitionend", () => {
+        if (counter === 0) {
+          imgTrack.style.transition = "none";
+          contentTrack.style.transition = "none";
+          counter = totalSlides - 2;
+          imgTrack.style.transform = `translateX(-${counter * 100}%)`;
+          contentTrack.style.transform = `translateX(-${counter * 100}%)`;
+        }
+      });
+    };
+  </script>
+
+</body>
+</html>

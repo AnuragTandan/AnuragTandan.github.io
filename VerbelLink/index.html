@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verbal Link</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- ***************Font****************** -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- ****************font CDN*****************************8 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- **************************smooth scroll*********************************** -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <!-- ********************************web icon********************************************* -->
+
+  <!-- ******************bootstrap cdn********************** -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+  <!-- ***************web-logo************************ -->
+  <link rel="icon" href="img/web-logo.png" type="image/icon type">
+</head>
+<body>
+    <header >
+      <div class="header-container">
+        <div class="left-header">
+          <img src="img/web-logo.png" alt="">
+          <h2>Verbal Link</h2>
+        </div>
+        <div class="right-header">
+          <ul>
+            <a href="index.html"><li>home</li></a>
+            <a href="servicess.html"><li>services</li></a>
+            <a href=""><li>about us</li></a>
+            <a href="contact.html"><li>contact</li></a>
+            <a href="#" class="open-email"><li>help</li></a>
+            <a href=""><button class="login" id="openRegistration">Register</button></a>
+          </ul>
+        </div>
+      </div>
+    </header>
+  
+  
+  <section class="registration-choice">
+    <div class="choisContainer">
+      <span class="registrationChoice"><i class="fas fa-times"></i></span>
+      <h1>Select Your Role</h1>
+      <div class="choices">
+        <div class="choice1" id="registerAsTranslatore">Become Translator</div>
+      <div class="choice1" id="registerAsTourist">Register as Tourist</div>
+      <div class="choice1" id="loginAdmin">Admin</div>
+      </div>
+    </div>
+  </section>
+    
+
+  <section class="adminLogin login-form">
+    <div class="overlay"></div>
+    <!-- Login Popup -->
+    <div id="AdminloginPopup" class="popup">
+      <span class="close-btn" id="closeAdminLogin"><i class="fas fa-times"></i></span>
+      <h2 style="color: black;text-align: center; margin-bottom: 10px;">Welcome Back</h2>
+      <form>
+        <div class="form-heading">
+          <a href=""><h2>Login</h2></a>
+          <!-- <a href="" class="sec-h2" id="openSignup"><h2>sign up</h2></a> -->
+        </div>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Password" required>
+          <button type="submit" class="AdminBtn">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="login-form">
+    <div class="overlay"></div>
+  
+  
+     <!-- Login Popup -->
+     <div id="loginPopup" class="popup">
+      <span class="close-btn" id="closeLogin"><i class="fas fa-times"></i></span>
+      <h2 style="color: black;text-align: center; margin-bottom: 10px;">Welcome Back</h2>
+      <form>
+        <div class="form-heading">
+          <a href=""><h2>Login</h2></a>
+          <!-- <a href="" class="sec-h2" id="openSignup"><h2>sign up</h2></a> -->
+        </div>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Password" required>
+        <div class="submit-btn">
+          <button type="submit">Login</button>
+        <button type="submit">Google <i class="fab fa-google"></i></button>
+        </div>
+        <div class="loginLink">
+          <p>Already a member click here <a href="" id="openSignupForm">Sign-up</a></p>
+        </div>
+      </form>
+    </div>
+  
+    <!-- Signup Popup -->
+    <div id="signupPopup" class="popup">
+      <span class="close-btn" id="closeSignup"><i class="fas fa-times"></i></span>
+      <form>
+        <h2 style="color: black;text-align: center; margin-bottom: 10px;">Welcome to Verbal Link</h2>
+        <div class="form-heading">
+          <!-- <a href="" class="sec-h2" id="openLoginBtn"><h2>login</h2></a> -->
+          <a href=""><h2>sign up</h2></a>
+        </div>
+        <label for=""></label>
+        <input type="text" placeholder="Enter your name" required>
+        <input type="date" placeholder="DOB" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="signup-btn">Sign Up <i class="fas fa-arrow-right"></i></button>
+        <div class="loginLink">
+          <p>Already a member click here <a href="" id="openLoginForm">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <section class="translator-registration">
+    <div class="form-container">
+      <div class="theForm">
+        <div class="form-registration-top">
+          <h2 class="common-h2">New Registration</h2>
+          <span class="close-btn" id="close-registration"><i class="fas fa-times"></i></span>
+        </div>
+        <form onsubmit="validateForm(event)" enctype="multipart/form-data">
+          <!-- Profile Image Upload (Uncomment if needed) -->
+          <!-- 
+          <div class="form-group">
+            <label for="profileImage">Profile Image:</label>
+            <input type="file" id="profileImage" name="profileImage" accept="image/*" required>
+          </div> 
+          -->
+    
+          <!-- Full Name Input -->
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message" id="nameError"></div>
+          </div>
+    
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="emailError"></div>
+          </div>
+    
+          <!-- Phone Number Input -->
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <div class="error-message" id="phoneError"></div>
+          </div>
+    
+          <!-- Password Input -->
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error-message" id="passwordError"></div>
+          </div>
+    
+          <!-- Country Input -->
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+            <div class="error-message" id="countryError"></div>
+          </div>
+    
+          <!-- Languages Known Input -->
+          <div class="form-group">
+            <label for="languages">Languages You Know:</label>
+            <input type="text" id="languages" name="languages" required>
+            <div class="error-message" id="languagesError"></div>
+          </div>
+    
+          <!-- Additional Fields (Uncomment if needed) -->
+          <!-- 
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <div class="error-message" id="addressError"></div>
+          </div>
+          <div class="form-group">
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required>
+            <div class="error-message" id="educationError"></div>
+          </div>
+          <div class="form-group experience-sec">
+            <label for="experience">Years of Experience:</label>
+            <select id="experience" name="experience">
+              <option value="0-1">0-1 Year</option>
+              <option value="2-5">2-5 Years</option>
+              <option value="5-10">5-10 Years</option>
+              <option value="10+">10+ Years</option>
+            </select>
+          </div>
+          -->
+    
+          <!-- Submit Button -->
+          <button type="submit" class="submit-button">Submit Registration</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+
+    
+    <section class="sep1"></section>
+    <section class="section1 top">
+      <div class="landing-img">
+        <img src="img/home-img-index.jpg" class="home-img" alt="">
+        <img src="img/colleagues-working-together-office.jpg" class="homeimg" alt="">
+        <img src="img/home-img-translator.jpg" class="homeimg" alt="">
+        <img src="img/home-servicess.jpg" class="homeimg" alt="">
+      </div>
+      <div class="section1-containt">
+        <h1>Breaking Language Barriers for Seamless Communication</h1>
+        <h3>Connect with expert translators worldwide for all your translation needs.</h3>
+        <a href="availableTranslators.html"><button>find my translatoer <i class="fas fa-long-arrow-alt-right"></i></button></a>
+        <!-- <a href="registration.html"><button class="translatoer-registration-btn">register as a translatoer <i class="fas fa-long-arrow-alt-right"></i></button></a> -->
+      </div>
+      <div class="home-divider">
+        <img src="img/triangle-asymmetrical-divider-inverse.png" alt="">
+      </div>
+    </section>
+
+    <!-- <section class="translatoeRegisterForm">
+      <div class="formHead">
+        <h2 class="common-h2">New Registration</h2>
+        <span class="close-btn" id="closeLogin"><i class="fas fa-times"></i></span>
+      </div>
+      <form action="post">
+        <table>
+          <tr>
+            <td>Your Name : <input type="text" name="name"></td>
+            <td>E-mail <input type="email" name="email" id="email"></td>
+          </tr>
+          <tr></tr>
+        </table>
+      </form>
+    </section> -->
+  
+    <section class="sec2">
+      <div class="sec2-container">
+        <div class="sec2-left">
+          <h2 class="common-h2">Who we are ?</h2>
+          <p>At Verbalink, we specialize in providing an AI-based transcriber solution tailored for audio and video files. Our cutting-edge technology ensures fast and accurate transcriptions for various industries and applications. With intelligent algorithms, our transcriber converts spoken words into written text with exceptional precision and efficiency. Whether you need transcriptions for interviews, meetings, lectures, or any other audio or video content, Verbalink has got you covered.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum in quisquam ratione aliquam quod cupiditate culpa optio officiis corrupti dolorem distinctio consequatur aperiam, ullam eos architecto totam repellendus, tempore iste laborum repudiandae. Animi assumenda modi cupiditate quaerat illum recusandae voluptatum.</p>
+        </div>
+        <div class="sec2-right">
+          <img src="img/how-to-hire-the-right-translator.png" alt="">
+        </div>
+      </div>
+    </section>
+  
+    <section class="sec3">
+      <div class="sec3-container">
+        <h2 class="common-h2">Our Services</h2>
+        <!-- <img src="img/iphone-16-2560x1440-background-blue-25956.jpg" alt=""> -->
+        <div class="service-kart">
+          <div class="service1">
+            <h2>Document translation</h2>
+            <p>Fast and accurate document translation services for various languages.</p>
+            <button class="btn1">Know more</button>
+          </div>
+  
+          <div class="service1">
+            <h2>Live Interpretation</h2>
+            <p>Connect with live interpreters for meetings, conferences, and more.</p>
+            <button class="btn1">Know more</button>
+          </div>
+  
+          <div class="service1">
+            <h2>Multilingual Support</h2>
+            <p>Offering 24/7 support in multiple languages through phone, chat, and email.</p>
+            <button class="btn1">Know more</button>
+          </div>
+  
+          <div class="service1">
+            <h2>Translator Hiring</h2>
+            <p>Hire a professional translator to assist you during your travels for seamless communication and local insights.</p>
+            <button class="btn1">Know more</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section class="sec4">
+      <div class="sec4-container">
+        <h2 class="common-h2">
+          How it works
+        </h2>
+        <p>1. Choose your language pair.</p>
+        <p>2. Find a qualified translator.</p>
+        <p>3. Submit your documents or request live interpretation.</p>
+      </div>
+    </section>
+  
+    <h1 class="common-h2 testi">
+      What say's our clients
+    </h1>
+  
+    
+    <!-- <section>
+      <div class="testi-bgc-img">
+        <div class="test-container">
+          <div class="testimonials">
+            <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+            <p><cite>-Bhavna Vaishanw-</cite></p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="secondTestiModel">
+      <div class="slider-container">
+        <div class="slider-track">
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/ruchi.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Ruchi Dewangan-</cite></p>
+            </div>
+          </div>
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/sanjay.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Sanjay Sahu-</cite></p>
+            </div>
+          </div>
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/anurag.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Anurag Tandan-</cite></p>
+            </div>
+          </div>
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/anjana.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Anjana Bagh-</cite></p>
+            </div>
+          </div>
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/ruchi.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Ruchi Dewangan-</cite></p>
+            </div>
+          </div>
+
+          <div class="slide content-info">
+            <div class="testi-img">
+              <img src="img/sanjay.jpg" alt="">
+            </div>
+            <div class="content-info">
+              <p>"Verbal Link made international business communication seamless, Fast, accurate translations at a reasonable price!"</p>
+              <p><cite>-Sanjay Sahu-</cite></p>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="slide-btn">
+          <button class="prev" onclick="goPrev()">Prev</button>
+          <button class="next" onclick="goNext()">Next</button>
+        </div>
+      </div>
+    </section>
+  
+    <section class="sec5">
+      <h2 class="common-h2">
+        <!-- Contact Us -->
+      </h2>
+      <div class="sec5-container">
+        <div class="left-sec5">
+          <h1>Get in Touch</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quos voluptatem libero iusto nemo ratione dolores. Sed eligendi aspernatur, ea quae et nisi saepe architecto labore inventore, culpa enim doloribus.</p>
+          <div class="contact-info">
+            <p><i class="fas fa-map"></i> 34 Shankar Nagar, Raipur,
+              Chhattisgarh</p>
+              <p><i class="fas fa-phone-alt"></i> +91 89658 98569</p>
+              <p><i class="fas fa-envelope"></i> info@verbalink.com</p>
+          </div>
+        </div>
+        <div class="right-sec5">
+          <p>Full Name :</p>
+          <input type="text">
+          <p>Mobile :</p>
+          <input type="tel">
+          <p>Eamil :</p>
+          <input type="email">
+          <p>Message :</p>
+          <textarea name="text" id=""></textarea><br>
+          <button>Send Message</button>
+        </div>
+      </div>
+    </section>
+  
+  
+    <footer>
+      <div class="footer-container">
+        <div class="bottom-header footer-logo">
+          <div class="art-logo">
+            <div class="logo">
+              <div class="logo-img">
+                <!-- <img src="img/logo.png" alt=""> -->
+              </div>
+              <div class="logo-txt">
+                <h2>Verbal Link</h2>
+                <p>Lest translate the world!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-sec2">
+          <h2>useful links</h2>
+          <div class="links">
+            <a href="">home</a>
+            <a href="">about us</a>
+            <a href="contact.html">contact us</a>
+            <a href="">services</a>
+            <a href="">help</a>
+          </div>
+        </div>
+    
+        <div class="footer-sec3">
+          <h2>
+            join our newsletter now
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, aspernatur.</p>
+          <input type="email" name="" id="" placeholder="Your Email Address"><button>subscribe</button>
+          <div class="footer-icon">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>copyright©made ❤️ anurag</p>
+    </div>
+    </footer>
+  <script src="login.js"></script>
+  <script src="script.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="gsapAnimation.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+</body>
+</html>

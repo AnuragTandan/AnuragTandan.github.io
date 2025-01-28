@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Circular Slider</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+    .slider-container {
+      width: 80%;
+      height: 60vh;
+      overflow: hidden;
+      position: relative;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slide-btn {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+    .prev, .next {
+      padding: 10px 16px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slider-track">
+      <img src="img/home-servicess.jpg" alt="" class="slide"> <!-- Clone of last slide -->
+      <img src="img/colleagues-working-together-office.jpg" alt="" class="slide">
+      <img src="img/home-img-index.jpg" alt="" class="slide">
+      <img src="img/home-img-translator.jpg" alt="" class="slide">
+      <img src="img/home-servicess.jpg" alt="" class="slide">
+      <img src="img/colleagues-working-together-office.jpg" alt="" class="slide"> <!-- Clone of first slide -->
+    </div>
+    <div class="slide-btn">
+      <button class="prev" onclick="goPrev()">Prev</button>
+      <button class="next" onclick="goNext()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const track = document.querySelector(".slider-track");
+    const totalSlides = slides.length;
+    let counter = 1;
+
+    // Initial position
+    track.style.transform = `translateX(-${counter * 100}%)`;
+
+    const goNext = () => {
+      if (counter >= totalSlides - 1) return;
+      counter++;
+      track.style.transition = "transform 0.5s ease-in-out";
+      track.style.transform = `translateX(-${counter * 100}%)`;
+
+      // Reset position to create the illusion of an infinite loop
+      track.addEventListener("transitionend", () => {
+        if (counter === totalSlides - 1) {
+          track.style.transition = "none";
+          counter = 1;
+          track.style.transform = `translateX(-${counter * 100}%)`;
+        }
+      });
+    };
+
+    const goPrev = () => {
+      if (counter <= 0) return;
+      counter--;
+      track.style.transition = "transform 0.5s ease-in-out";
+      track.style.transform = `translateX(-${counter * 100}%)`;
+
+      // Reset position to create the illusion of an infinite loop
+      track.addEventListener("transitionend", () => {
+        if (counter === 0) {
+          track.style.transition = "none";
+          counter = totalSlides - 2;
+          track.style.transform = `translateX(-${counter * 100}%)`;
+        }
+      });
+    };
+  </script>
+</body>
+</html>
