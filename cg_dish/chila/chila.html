@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - चिला</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recipes">रेसिपी</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी चिला</h1>
+            <p class="lead">एक पारंपरिक और स्वादिष्ट व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://i.pinimg.com/736x/82/c1/20/82c120a6713e0f0ad1aec56221f30b3a.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी चिला">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">छत्तीसगढ़ी चिला छत्तीसगढ़ का एक पारंपरिक और लोकप्रिय व्यंजन है। यह चावल के आटे या भीगे हुए चावल से तैयार किया जाता है और विशेष रूप से ग्रामीण क्षेत्रों में सुबह के नाश्ते या हल्के भोजन के रूप में पसंद किया जाता है। यह स्वादिष्ट, पौष्टिक और आसानी से बनने वाला व्यंजन है, जो कम सामग्री के साथ भी बेहद लज़ीज़ होता है। इसे आमतौर पर टमाटर की चटनी, हरी चटनी, दही या अचार के साथ परोसा जाता है।</p>
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">छत्तीसगढ़ी चिला की उत्पत्ति छत्तीसगढ़ के ग्रामीण क्षेत्रों से हुई, जहाँ चावल मुख्य भोजन का हिस्सा रहा है। पुराने समय में जब रात के बचे हुए भिगोए चावल का उपयोग करना होता था, तब महिलाएँ उसका पतला घोल बनाकर तवे पर चिला तैयार करती थीं। समय के साथ यह व्यंजन छत्तीसगढ़ की खानपान संस्कृति का अभिन्न हिस्सा बन गया और इसे त्योहारों, मेलों और रोज़मर्रा के भोजन में शामिल किया जाने लगा।</p>
+                            
+                            <!-- New Sections Added Here -->
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">एक छत्तीसगढ़ी चिला (लगभग 100 ग्राम) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 120-150 किलो कैलोरी (तेल की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 20-25 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 2-3 ग्राम</li>
+                                <li><strong>फैट</strong>: 3-5 ग्राम (तेल या घी के उपयोग पर निर्भर)</li>
+                            </ul>
+                            <p class="card-text">कम तेल में बनाया गया चिला और भी स्वास्थ्यवर्धक होता है।</p>
+                            
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li>हल्का और सुपाच्य: चिला पेट पर हल्का और आसानी से पचने वाला व्यंजन है।</li>
+                                <li>ऊर्जा का स्रोत: चावल में मौजूद कार्बोहाइड्रेट तुरंत ऊर्जा प्रदान करता है।</li>
+                                <li>ग्लूटन-मुक्त: चावल आधारित होने के कारण यह ग्लूटन-एलर्जी वाले लोगों के लिए उपयुक्त है।</li>
+                                <li>सभी उम्र के लिए: कम मसालों के कारण यह बच्चों, बुजुर्गों और सभी आयु वर्ग के लिए आदर्श है।</li>
+                                <li>क्षेत्रीय और किफायती: स्थानीय सामग्री से बना यह व्यंजन छत्तीसगढ़ की संस्कृति को दर्शाता है और किफायती है।</li>
+                            </ul>
+                            
+                            <h2 class="card-title">वैरायटी</h2>
+                            <ol class="card-text">
+                                <li><strong>मीठा चिला</strong>: चावल के घोल में चीनी या गुड़ मिलाकर मीठा चिला बनाया जा सकता है। इसे घी और शहद के साथ परोसा जाता है।</li>
+                                <li><strong>स्टफ्ड चिला</strong>: चिला में आलू मसाला, पनीर या सब्जियों की स्टफिंग डालकर इसे और स्वादिष्ट बनाया जा सकता है। स्टफिंग के लिए मसाले और हरी सब्जियाँ डालकर भरे हुए चीले बनाए जाते हैं।</li>
+                                <li><strong>मिक्स अनाज चिला</strong>: चावल के साथ उड़द दाल या मूंग दाल मिलाकर चिला बनाया जा सकता है, जो प्रोटीन की मात्रा को बढ़ाता है।</li>
+                            </ol>
+                            
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> 1 कप चावल (4-5 घंटे भिगोया), नमक, तेल।</p>
+                            <p class="card-text"><strong>विधि:</strong> चावल को पीसकर पतला घोल बनाएँ, नमक मिलाएँ, तवे पर गोल फैलाकर सुनहरा सेंकें।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी चिला रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>चावल – 1 कप (4-5 घंटे भिगोया हुआ) या चावल का आटा – 1 कप</li>
+                        <li>पानी – घोल बनाने के लिए (आवश्यकतानुसार)</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>प्याज – 1 मध्यम, बारीक कटा (वैकल्पिक)</li>
+                        <li>हरी मिर्च – 1-2, बारीक कटी (वैकल्पिक)</li>
+                        <li>हरा धनिया – 1-2 चम्मच, बारीक कटा (वैकल्पिक)</li>
+                        <li>तेल या घी – तवे पर सेंकने के लिए</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>घोल तैयार करें</strong>: भिगोए हुए चावलों को थोड़े पानी के साथ मिक्सी में बारीक पीसकर पतला घोल बनाएँ। अगर चावल का आटा उपयोग कर रहे हैं, तो उसमें पानी डालकर चिकना और पतला घोल तैयार करें। घोल की स्थिरता डोसे के घोल जैसी होनी चाहिए।</li>
+                        <li><strong>मिश्रण बनाएँ</strong>: घोल में नमक डालें। स्वाद के लिए बारीक कटा प्याज, हरी मिर्च और हरा धनिया (वैकल्पिक) मिलाएँ।</li>
+                        <li><strong>तवा तैयार करें</strong>: तवे को मध्यम आँच पर गरम करें और उस पर थोड़ा तेल या घी लगाएँ।</li>
+                        <li><strong>चिला बनाएँ</strong>: एक करछी घोल तवे पर डालें और गोलाकार में पतला फैलाएँ, जैसे डोसा बनाते हैं।</li>
+                        <li><strong>सेंकें</strong>: मध्यम आँच पर चिला को दोनों तरफ से सुनहरा और कुरकुरा होने तक सेंकें। इसके लिए प्रत्येक तरफ 1-2 मिनट पर्याप्त हैं।</li>
+                        <li><strong>परोसें</strong>: गरमागरम चिला को टमाटर की चटनी, हरी चटनी, दही या अचार के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>© 2025 छत्तीसगढ़ी भोजन</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>
