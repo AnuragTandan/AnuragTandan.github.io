@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - बिजौरी</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी बिजौरी</h1>
+            <p class="lead">एक पारंपरिक और कुरकुरा नमकीन व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसीपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://i.ytimg.com/vi/V2ZiLlObSto/maxresdefault.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी बिजौरी">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">बिजौरी छत्तीसगढ़ का एक पारंपरिक नमकीन व्यंजन है, जिसे उड़द की दाल, सफेद तिल और मसालों से बनाया जाता है। यह कुरकुरा स्नैक भोजन के साथ साइड डिश के रूप में या चाय के साथ नाश्ते में खाया जाता है। बिजौरी को पहले धूप में सुखाया जाता है और फिर तेल में तलकर परोसा जाता है, जो इसे अनोखा क्रंच देता है। यह व्यंजन छत्तीसगढ़ी घरों में विशेष रूप से त्योहारों और सामुदायिक भोजनों में लोकप्रिय है। इसकी लंबी शेल्फ लाइफ और पौष्टिक सामग्री इसे हर उम्र के लोगों के लिए पसंदीदा बनाती है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">बिजौरी की उत्पत्ति छत्तीसगढ़ के ग्रामीण और आदिवासी समुदायों से हुई है, जहाँ स्थानीय लोग उड़द दाल और तिल जैसी सामग्री का उपयोग करके पौष्टिक और टिकाऊ खाद्य पदार्थ बनाते थे। यह व्यंजन परंपरागत रूप से धूप में सुखाकर तैयार किया जाता था, जिससे इसे लंबे समय तक संग्रहित किया जा सकता था। बिजौरी को अक्सर सामुदायिक भोजनों और त्योहारों में साझा किया जाता है, जो छत्तीसगढ़ी आतिथ्य और संसाधनशीलता को दर्शाता है। इसका कुरकुरा स्वाद और सरल तैयारी इसे क्षेत्रीय व्यंजनों में खास बनाती है।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">बिजौरी (लगभग 30 ग्राम, तली हुई) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी:</strong> 150-180 किलो कैलोरी (तलने के तेल पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट:</strong> 10-12 ग्राम</li>
+                                <li><strong>प्रोटीन:</strong> 4-5 ग्राम</li>
+                                <li><strong>फैट:</strong> 8-10 ग्राम</li>
+                                <li><strong>विटामिन्स:</strong> विटामिन B समूह (उड़द दाल से)</li>
+                                <li><strong>खनिज:</strong> आयरन, कैल्शियम, और मैग्नीशियम (उड़द दाल और तिल से)</li>
+                            </ul>
+                            <p class="card-text">बिजौरी प्रोटीन और खनिजों से भरपूर है, लेकिन तलने के कारण इसे सीमित मात्रा में खाना बेहतर है।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>प्रोटीन का स्रोत:</strong> उड़द दाल में प्रोटीन होता है, जो मांसपेशियों और ऊर्जा के लिए लाभकारी है।</li>
+                                <li><strong>खनिजों से भरपूर:</strong> तिल कैल्शियम और आयरन प्रदान करता है, जो हड्डियों और रक्त के लिए अच्छा है।</li>
+                                <li><strong>लंबी शेल्फ लाइफ:</strong> सुखाने की प्रक्रिया इसे महीनों तक ताजा रखती है।</li>
+                                <li><strong>स्थानीय और टिकाऊ:</strong> स्थानीय सामग्री का उपयोग पर्यावरण के अनुकूल है।</li>
+                                <li><strong>त्योहारों में लोकप्रिय:</strong> सामुदायिक भोजनों में साझा करने के लिए आदर्श।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> उड़द दाल, सफेद तिल, जीरा, धनिया पाउडर, लाल मिर्च पाउडर, नमक, तेल।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> उड़द दाल को भिगोकर पीसें, तिल और मसाले मिलाएँ, छोटे गोले बनाकर धूप में सुखाएँ, फिर तलकर परोसें।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी बिजौरी रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>उड़द दाल (बिना छिलके वाली) – 1 कप (लगभग 200 ग्राम)</li>
+                        <li>सफेद तिल – 2 चम्मच</li>
+                        <li>जीरा – 1 चम्मच</li>
+                        <li>धनिया पाउडर – 1 चम्मच</li>
+                        <li>लाल मिर्च पाउडर – 1/2 चम्मच (स्वादानुसार)</li>
+                        <li>नमक – 1 चम्मच (स्वादानुसार)</li>
+                        <li>पानी – दाल पीसने के लिए, आवश्यकतानुसार</li>
+                        <li>तेल – तलने के लिए</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>उड़द दाल तैयार करें:</strong> उड़द दाल को अच्छी तरह धोकर 4-6 घंटे के लिए पानी में भिगोएँ। भिगोने के बाद पानी निकालें और दाल को मिक्सर में थोड़े पानी के साथ बारीक पीस लें।</li>
+                        <li><strong>मिश्रण बनाएँ:</strong> पिसी हुई दाल में सफेद तिल, जीरा, धनिया पाउडर, लाल मिर्च पाउडर और नमक डालें। सभी सामग्री को अच्छी तरह मिलाएँ ताकि गाढ़ा बैटर तैयार हो।</li>
+                        <li><strong>गोले बनाएँ:</strong> बैटर से छोटे-छोटे गोले या चपटे टिक्की के आकार बनाएँ। इन्हें कागज या साफ कपड़े पर रखें।</li>
+                        <li><strong>धूप में सुखाएँ:</strong> गोलों को 2-3 दिन तक धूप में सुखाएँ, जब तक वे पूरी तरह सूख न जाएँ। सुखाने के दौरान इन्हें रोज पलटें।</li>
+                        <li><strong>तलें:</strong> सूखे गोलों को गरम तेल में मध्यम आँच पर सुनहरा और कुरकुरा होने तक तलें। अतिरिक्त तेल निकालने के लिए टिश्यू पेपर पर रखें।</li>
+                        <li><strong>परोसें:</strong> बिजौरी को ठंडा होने दें और चाय के साथ या भोजन के साथ परोसें। सूखे बिजौरी को हवाबंद डिब्बे में 1-2 महीने तक स्टोर किया जा सकता है।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>

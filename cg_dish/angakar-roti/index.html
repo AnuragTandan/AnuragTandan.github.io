@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - अंगाकर रोटी</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .col-md-4 img{
+            width: 100%;
+
+        }
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी अंगाकर रोटी</h1>
+            <p class="lead">एक पारंपरिक और पौष्टिक व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFRUXGRkbGRgYGBoeGxsYGB8XGBoYHRgaHyggHR4nGxsdIjEhJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGxAQGy8lICY1Ly0tLTUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAECBwj/xABDEAABAgQEAwYEBAUDAgUFAAABAhEAAyExBAUSQVFhcQYTIoGRoTKxwfBCUmLRBxRyguEjkvFTohYzQ8LiJDRjc7L/xAAaAQACAwEBAAAAAAAAAAAAAAACAwABBAUG/8QALxEAAgICAQMCBAYBBQAAAAAAAAECEQMhMQQSQSJREzKB8BRhcZGh0QUVI0JS4f/aAAwDAQACEQMRAD8AfENVq7CBpaXVrNQmg5ndX09YJXMskXNzwjUxkpA2tG3Rk2BT1EuBvQF4LRUdIX4pwtKED7N/aGoSwELW2xktJE3eJAqWaKnisUZszV+FyE9Bv53h1nDiXSmot5XivyJaiQTypAZX4DxLyPcGpKS5JYs3Ib04w3y6aHUdno961Z4ra1EEOa/bUixoWAE6mBsBzi8Ugc0Tta7mmowUhngZYSK8LwOvEq0KUPLqaAQ7uoS42aC1LxRY+BID9fF9+kH4iZt5fvHGVyDKlAFytnUSXdRvWBJmJqeNvXeAb7Y78hpd8tcI3OGshCaAl1f0j9zSCQg7XN4GwTMVMWUWA/SKA+dTHc2apyWoOHDb2iR4sKXNINkpCfu5uYl0nzgWWtROzO3pfleDJUw8mghbshVJLKIHi2+giGVPWogEFLCx4iN53ge8KSJmlhQORXZVIMQlkJB8RAbUbkiBp2EpKhfjEalS5X5jqUf0oY+5YQwxUxkvwgDCl1TZoYuRLRw0o+Ij+5/9sSMFKTvf6RQXJqQNRc+XOCgEmgJp9vHSRwpBEsAVIg4oGUjmTIY/d4mUl4imT0oQpavhSConkKmBsozvD4lOqRMC2uKhQ6pNRBWloU7YR3B2LcB84hmqVYC9PLjBURA1puP+IjCiwbOZjygjeYpMvn4qE+SXPlBIljgwAYV8oVmaJmJ0u/dAn+5XgT7a4cFLAQKd7JJVoULkPMoSwHGNJQzMXc/vBRsTehMCLmEJFKtC2OV0dyy62vbpE0gk/hLAwNJodXTzhnISDeJHZJPQNNR/rILMNCh7pP7waSBdoEnf/cIAH/pq+af3hiUuLCCj5Ak+CHWOUZEVD+BPmI1F9xXaJcJLcvsLdYHmTNa1H8KfCB+ZX4j029YmxK2SmWgspe/AfiV97kQKiWNvhTQDaBk60MjG9msSoAFYHiFBGYIqUgqJ9eEbnoGliL8IGXMUmlkizQLe7CXFBeLUCkIKXJLqqzAfVvnAUxgCUpsNnpGTSyFGrq2iPL5yiNOx5cICUrZcI0jrK5Lq1qvs48xFgRha6t/3gaRhHUH/AA1puYO75nozO439IbjSS2KySbegXGo/Caaj8o6woctYJLP+Y0J9PnFc7S9pDI8WihdKVFQA10JYbkOLsI57UdqFSMHKEsFM2ammoB0JF1NxO3rA98bb9iSjJRSLLmWNlooqYhH9SgC3nAaJ0tdELSomnhUDS6rWpHkshZWSpRKlG5JcnmTBmDWpCtaSUniKH2hTyuXgKMe09flNQEMBQNHU6aiWhUxVkgn0qI80/wDE+KDaZmrkpIP0eGozHFz5QCpUsXdTlqih08Q/EwcuojFWy4YJ5HSGh7WHQ6JQOlyoFVQOIAFYV4rt8aCWlKDu7qI6AU9YCwPYxcysyap61sG5C0WnB9k5SEeJIoPo0c6XWtaTb/g3R6H/ALuv5BMD2qC0hJUqZND/AApb+ltTcfaLDKnzleAJA8JqXcKNrULdYhwuXpSAUgEi3LpBeBVMeoAhP47K+NL9xj6TElrZ3gcv7qUiXfSlnt1PmawTLksAzMIlBcsxIiPEFKEnYtteH/jJxQn8NFs5mTAgFSgQBcAE+gF/KECe3EorYypgD8geFUm3rDjv1KSaxXcywpmnQTpTQksC/K0Rf5KT1X3/ACF/p6fkQds+3UxWqQlAloatyVA2rRgeAiq5UtYAWgqSoWUksR0Ih1n3ZI01TiUixUlRUmtmTQprxo8AI7N4mWfCRNH6bt/SYJZ++nJ2Jn0s4cIunZztqS0nEtWgmhhf84/9w/zFyVO0pUoCm1eUeJTKEhQUCLghj6RZsl7UlEkyJjkAEy1PvVknk9jtGpZmlv6GZQVl57MydXeTW+NZY/pQ6R/3aj5wzxk0gFugezmMyqUJciWkF2QkPxpU/WFWZFS5juAgUF/NwC0Pb7IFKPxMlkhJLB4gxU1goMxahjpEyIMbg0zSRMCikJoA/wAXFhGNZG2bXjSR3hgqnKnRhX5+0PMLcvFbyjLlITock7l3LdfaLLgZVTV6Ufk0acUmzNmikiOWsd6q/hSB5Fj99II1lQIY2LRxLl1XT8XsAloKlBhaHpGZipMtqFVResagyZKW5bS3lGQuhvcyoLmXWfCtbBjsnZLcd/OCcKQlNSP8wJjZGpaVOeQ5mj+kTzSKJFflEjyxk/lSJdWqgIJiIYYrrYCgNanltHEigUVK5U3/AGH7RKvHEJZIZ/lEcl5B7X4NFYTpsVb9ImICrMLMw9oViWdTD194dYZISA+9jFQdkmqCZJKSAACzttU3LxFjAakXPyHIRIH2gTHYhT90kkEpJWoXTLsQOarDzO0MlwJXJT88xs3/AE5gICDqCdSUmxqfEDfbkOcJ8xWjFErnTNM0JHiqUGrB03Tf8PpD7tBjUFOgLR/Q4sLU6RXUYN6Upw35xz80bdJjov8AIDOXTJJGpBIIcLFUK/pUKH7pB2XYJc5WkVPKw6m0Trm92W1AJYOg1Spm+JNjF87KZZKEsKRpAU5IAp0cuffaEZMuTHHS2aMOOM5ep6FmSdnEs5D82uOXKLGMvTQBglmAgteDaxYROiUbBoyKMpP1G95FFekCw2DSn4Rb0gxUt4inpmSw6tIGx58I2ibdoP4fbpi3k7tnSZWwo0balbirCppHHeEVJcffCFM/O9B8SQEEkBWqr3tesBJpDIxcuBwMelKmUUgqsFFnjWIlrUdQ06eDmvtSK/PzuRNYOnUk6mWKJ0/i1MwhjgM5CjpAU43CU6W2q4gHkg9SYSwzjtIY4eU4LjeOpmHAskfSJETSRQR1UgnTV7HhvUPtDYxi1oU5ysFmywzlJ4W+6QFi5IHiBYfXoIOkd5VgdP66N61P+I6xMorADAV4O8DQyM65Eq8FIxCWmISriTfqNwYqPaPsf3QM3Dq7ySA6kkupDXPNPuIvMzKUqJ1JIO7Uf9o3h8s7slaSqt0kuGHW0Fim4PQOaEZr8ym9j8/XJaTMJMk2O6CeH6eIi9TAAmnC+1bx5f2lnCXNJQCErqlKgUtUg3Z6h24EQol51iErRM1q8FAl/C26WsxjprN6dHLcO2Wz1gSXDuWTWkTSnd3cIvxo8BZdM75KVJHhUlKvI1YwbNQEpUUnxKOnyf8AeKxKo9xoyO3VkOFxDoNWKjbe7W6w1wa0ywpSiAkbk0HCphWuSFFKA3hIq9SRU/fODMchSZSzcaCSAHdwzQ7Hr6CMu/qE4CcSgKJHiJI6F2Ho0SLxTDzaOZktKUkWAAA4hrQmwGJmKm6aGhdzwo/WHSk40hUYqVyHmtI4ffnGRwUI3If941E2UVju/EBWnzMEGQdz/iIsKNSyouLs8MlgAV3+/vrEglTZJTbaQumJDPQAWDR3h8K7qUKbR1PlhTAOQPR7mCMOqlbWESMbZJSpG8PhQkGgc3iSaoUESTDSBsoP8wo934kAkGY9CoFiE8Qk3VZ6By7HJqOgI3JhKHPw1MLcf2WVMSo4jEGSlR1LCCEvwSVqD6QKMEh6neF/aztqJBMjBsViiptwCLhP7x59jM1nz3M2apfU09Ix5eojxya8XTOrZf05Rk6QxnBRFH1rPulhEK8Hlb6UTObha9+a6eUecS1JtEGJUHhDy3/xHLCvc9DxPYaXNGvDz9YvpWxB5a029Iq0zNsfls8JmpWlFWDuhTt4kKsTS3q0J8Bms2UdUuYpJ5GnpHpXZvtHJzCWcLi0JUSLcf1JN0qF3FRFpxloqUHHaDezGcLxUhM0zbuQgEPc0PpFyy+YVpdgCfy8qR4NnPZifl2LKZU4gEa5av8AqSxcEWKk2I5g2Mep5dnsvC4JE6dMDlCVqbdSmokE8SwEWopA99j/ADNSNSe+WALJAuTvT0iIykaQtJLjdqnYhj8oWYXtNIxHdrBChdAIDhVQ7XFHgtSVTC5+EiFzlXGw4gGPmOQJQUC41KNPRw0KM1yUKmmYpRJJtsBVmD8P3ixLlFinYwMVjVpO9GfhHNyqdvu/o3YsiXylfmgplhJQklChoYEeGxfjBfZ/M1LBfDlBdqkB7kmmzwZmY7tIWQ6Qw59fKJMqQQXbVquTxoLbbQhR3UjQ53G0NRjRpsX5QVIxNB7REAljR6Gg++cQhy7JbgKR0McfK2c+UvcYfzDxOkpu5rCuUpqROJ4FSIbxyB+gXNNONeUQywQQ6rxzLnVDJpuQbHpHWKQ7FnItt6QiTTXdEataYPnmBC5M0EJLoIc8SCB0vHimFlAhmccj9vHukhfhZQb58Kx49jMuQjEzpaFlBTMUyWcAGoA5MRGvp2mZc6JMLnGKkpCZcw6EhgNKSAA9C4fcxYMg7TKxShKmhKZlSkigWbtyVyiu4icEae9WkE7pfWQOVh1MDScb4gZcpKS4dR8a2DOp2ABqKgCHSl4QqOnZ6nhJhSojgT5NQwzxraEprVSONkqSo9LQrySQnwHxMU6vESTc3JqXfeG6ZmqYRVpZDnYkpNPRQPlGrEnWxWZqxNmGZjvFg/DLS5DXd2Y+/lEPZTEGaVTCnSmw+f7e0B47CIxGLVVQSEh2FXFAK+dLUh/lclCRolqswIYbb2vEXqlfsXJ9sKXkHxeJIWQTWjskkOwerRqO8Zl6CskrWOSSQPSMg3AWsgKmUlJClUA+wOscT56llwByECZ1idJQNviLHf8ADT7sY7kLcahdvJoqT9XaiQjUe5k2HUCW9omlDxUdmflCrCJOojd6kcImzrMDIkTJgbwJUQOJAp/3MPOJGWrZU1sTZ/mi8TiUZfIUU6qz5ibpQA5QDsSmhOxUBxhn26zkYOQjBSGQpSRr000SxQIHB7eSor/8HsMJmKnTFnUpkAk3JmK1K9SkQh7dY5UzMMQ7kibpA/p8IA84xZpylG/c2dPBLkV42bskeUQ4IKJ0pSVqOwc/4+cMMlylWJUQCyB8SuP3sPOLXgpaMONCEhI/MzqPnHL6jrIYfRBXI6GPDLJvwVvDdmsUTSUEDio/5+kZjuymJ+J0EtsWiwzczJVpSFLVwFT99YNGX4mYLJR/U5P0aMEv8h1CdyaS+/zGfAgtHmGMwMyWfGkpiHDYtUtaVpLKSXB5iPSMfk0zSUrnpP6QgH5xQ83wHdLKSb/do6PSdbHNp8/X+hWTC0rR6d2nmIxmUoxROlckpWFC6XZCv7auR+mKEMN3gBJJADhOolIfdOzcxF1yeWU5BMCg+tOkDjrWAPm/lFDQhSAUodIHCg9RHTkr2c2Wmehfw/ThpMsq8CZyyUkkjUQ4ZIfa1OMX2UW2Yfe0fOv86tE6XOHjMtQUyiWJHv5xY8q7c4ydi3KtKSPBKDaBprV6l2NXeF9tbDjK9Hs/d6jwiPEYRAqGB349YRZf2sQsgLSpC6A/kJ4hXDkRvDcyBNUTTSUgk76uDdIGkw7aBNCZri7blqGOMLl60uCSQas1jtyaJcVIMkEpZuB/eAE5jPX+EAhnIO3pxhL6fHdtbHRyzSpPQ7wuHKATMrWjRMjEIXSE8jMwGRNV4lUAYtvc2/4iXuzRVwIfGoqoinbdslzuYZeHWtKdRQkljY3o4tXeK7he0C5aghaSXS9AFfE5o58q2A3h5i8UiZLKBpWFliKKHNwbjiImyPJZWGBMhIBUzqJJLCwD2HKFyVuxkXSqiTKMcqcH7sp6hgeb0eDJaQoMRoVuDz4K3ETieNTbxFjJ4Z7NUQtpJWWtsixGDCQVFRbiDaPL+1WYolz5hSNa2AqKAgAOX+ItVuVeBv8Ai8yT3ZUKg0IqPO1I8zQjDrmGWZhQorV45ywUEHUp9SQ4LsBe/KK6d45TfbZefHkUPUJpkxM0atZ1bvcvev3vDXJMs76YQ7ISln4qWQW8gkf7oS47A93MVo0qd2KSSkjchwPkINyjOZ8sshYAd20pIeguQ+wF41xdSML9j2LAStBBJISlKQB/TwHKDcJOoogVKlU+n0jzLB9u5+od6hK0hQJ0uk3BN3G3K5i4ZBnkqYCtCnUzlP4gVM5KbkAi9o1xyq9CnC0dSZipUsrWrUEhkgMljV35uQPSCcpxxmLSKMBUgEWez3Bu/SI8yUky9IHx3pw69AfKIsslolLSxbUAKmpIb0drRIS2lYycNN0OhgFf9Qipp1MagtEwkRkP7YmXukedy5C5imURW5JoA1K9PnD1OFmDw6UFqUWLeYiLLZfhqOe1thBiFEGhrxYUHmIQoSq4mlzjdSB5OHmJc92S92Uj94V9p8BNnYVcqXLXqOm/AKBuCdhDpWIUCQD7D9vt44x2ZLQgqewoNIcmwSLVJIESslVoq8V+Ss/w8yqfg5y1zUFKFJAe/iQXTQC1TXpCjt7lJOPxM6UCtExHeJKQaLWEpUn+oOot0MTZt2vx0pytEpQdtQQshxf8b+0OOxGcTccZgXMkSylPhSlMzVqNlKBmVQDdq9N81No0RaQP2d7uVhkIbx3UN3PF4U9qcyKE6U3Ps1yfveLJNxeKlLKMRLlg/hbXpWK1SrUx+fFoqWe49JxKFqlhhUgCtNqmoIox+UcGHSYV1DuTvnaOsp5FjtL+R12GktK1u5JcwfmuYKUrSi8UnI80MkkghjcEt86QxmZ+NWpID9X+UZc3RZHnc6v2DxZIqOxxOniRLJWfEbveKpJy2ZjZwSAfEQOiQQT7fSG2XZLicat9Kgl/iVT0+/KHGaZ1Iy5Bw+EIm4o0KkjUEcmq6v0+Z4Hp9D0bg+5/X+kZep6iLVIG/iHmSZKJGBlfBKZUwi2pmSjqxJPUcDFelY1MxFekNcB2SxGJSVKlrBVUmYS+olRKiLuSCC9Xg+V/DiYgeKehN6FuAIuob08j59pJs5UijY6RUqEGdlMjOInApJCZZSoqF92A6kN0i4Tv4cTSPBiZahzFDVrhR62tC/BdncwwEzvZcvvpZbWmWQSUhjRJZTjULDdt6C0/YtF5y/IQKqAd326+UM8HIKHVqfVYcByEJOyHaI4sLeUZK0K0qQu4cevHhYw/bSQzE+/NoW0vA1M7nqDMohjx2iOTKQPhb94HXMWrgxUwA2AuSeN4mRgUpcgqb15PxitlirNJ6ELokrUfwpYkAN4i5FP3EdypWLnyAlpUkKorW8wlBv4U6QFeZhPKyab/ADMycbFRCEi5l0A1/qJBV002ZhcpBpUEW4RP1Lv2OcsypEhCUoYAACgFQN2FoMnJS37GA5c4pJcmtgSGbkIIOIDeL0s/SM8siemNUHyRs0Ks2zZMq4cKoaVPn5w0mYpJoBU+/wBIredpOpQmJ1SyKgl28hW7WO8IyTT4NGHHv1CjOJaVpCkk91MehABBFDf4esVH/wAPqWd1MXZL24dWr5tFpGZCaRLSChIoAGAYWDKDesPMDgW0talwAR7U6bQEJzxXXk0zjCaXduil59kAlyUzUkhSWcW8JNAOBD/OEchHKtaddx+0X/tlh/ClMvUpZWKDkFaif8xXxk5stUtB4FTnyCNRB5H2jT0s32ep+Tl9XTyelCdcsNqArv8AQwOVKQpK0EhTuki4PD6ecWWTlcqqlTlULeBIAL81H6RubhMMxDLLjdQI4gsAG8jD3kXhGZIbdm+0H8ynSsNMRVQFlC2oDrcRYcLJClhSSUtdupeh2oPWKz2ZwUnvkzEjxJoUgnd7ncGm1/e0q+OYUUBoW3dvq/pDMd13NDe612ki84LmqIyAVYNBJNbnjtQRkH8WfuT4WP2JZCWDAD72jtYFXsKn6CkbbSG3gYgmh3NBxtf7sI3VRg5JMON6VL+WwhNmU3VMOmyKCv4yKq/tBbqo/lhxjl6EAJ+NXhTT8RcktuAAVeUKV4XSGSzJuTV9ySdyTXmYCdvSDx1dsTYvCpTL0qKdTFRe9PxHkP24xXhl6kELSooWmoUksQeLi0W/Gy3VXy8qiK72unaJKhuvwhubufR4HtUVfsVKbbr3J8D/ABQYGViJYnosVBhq56CNKvaCBmuSzTqPeSVG4KV/TWkeUeWLREepQjJJRnyjZGco8M9cVNyYVOIUeQQo/KXAs/tdlWH/APJw0yeoWKgEp/7i/wD2x5f/ADCoJy3CrnzJcpPxLU1nYXJ8g58oGOHHHhIJ5py5Z6Bg88zLN19zJIw2HFFd24pTwmZ8RLbJ0hjXZ35lYPLB3clCZ+IapUxCbuVG1jZ2oCwg3GFOXYaXg8OwmrFTSg3JPr5vyioTUAHS6q1JNCTdzvAZ+oWPS5Cx4u7bGM/OsdNKVFZIJJZNAQx9B6PTdolwykTBqUl1XIUSokC5BJtTetfOByAEp7tZSSGWzkB336fOkE4TDt3YDGjv+IDqDWrs/OOZPqJzduVGtY4x4RJMy+WWI/0yQxD73cW2BdhA8qfi5C9UqeFIBYBSzVrbcnhlLU4W6fEODVBF6gtz4dYwlQKXcnUQdQBcCqTxduHGzw6OeSe2V2RfgKyTtPJxCwmajROTQWCqbBXUWNKkxcStiC7g2IjyfO8oH/mofWlXjL1BNQaUIPl0i19is5ViZKpRITNs5sFgeFRHA2NbUEbcOVT15M2TH2lsUpiCQkDiYr/bHtYjBS0sgzJiiyEijtUkngKesUuT2lxyJiipaVVIUhSWIIcMGtXrbzhTmGJmzVGbNVrWWAawHAB6JBqz1rDEIc0EZdnU9WJTMMydrnKCSgpQpNfCCGKSkJu/6Y9cw+JCUtuGc8W3jw3EzFSyFoUy0nUFfqFmejR6d2fxqsRIQrTpUtAUzuA+1htCc1xg6G9PUpJSHxUlSgQoUNfN6D72gvEIGh3NGNIS4bK1oAGml+JHPj/zDNEpbVPl/jaOem14OjKMfDOcRNat+X+f3ivZziCr/UbwhwQ9a7jjXy+rnNp2lFGA3NNtoomZY0malaFOBwsQKGvI7QUVb2xkFrQtweJeYT3RuC4JHHxAj1IsW8ouOEzUBBK1ABnPIJrFfVOQiZ3iwNLO/C5NX3u8VLM80OIUUy6SgWNfEr/4084J3nmlBaQGSUcUH3O2NMRmxnYgz3OlIZA2/qbmS/QRJLmE6iLswPAkgP6PC1MopSEgfqVyFk/f6hE2GxYSQDur5D/MdBRUY0jjSk5O2EYucUJQ7NqNHozJ+/OBZuNUqqRdrbfbQ1x2A1pBHWIsqyoqmBRHwmwFHfh5xFBt0gXJJWy79i8qEqSlbHWpTrbahZPl8yYcTgAWBLlTVuObeY9o5yhBSkCrmwpRt287wwnJZJKm2rxIb67Rv+ElGkKhkd7Mw0saRbz514RuM1PUWjItItsTKnXa4of2++Md4GUXcvTjxP8AxEel3ozbfIP53jnGF/8ASSW1eKZyRbSOBUzDkFGD42Lq9IHmzitXegO4Ilv+QkOr+4h+gTasaKHIBqU15cn+cSSl612YCgDeXlE8ySKprav3xgYq9lyfboWiRqqakO3nFP7ey27of1fSL9KkUs3Lg8U3t0UlaAasCTyBYA+bH0MTPrExcHczz2bh9wHiHugaffSHczDflMCqwz7RzzZYsEtuY+7c4v38LMpT/OspitAD/p1Gg4Oya9WiuqlJlJSu85QdKfyjaaeZ/CP7uEP/AOGGLErFlwAVJcVNSgubn8pUfKLi7YSY5zbEgz586YD8ZlpezJD+QdnO0KBIJOpQPhuN6tt0EP8AtnIEqcpCh4FTVLtdKwk/v6QqlFNCgkIUSKM4f4bklwNw20cjqb+IzpY/lQfgFvpSfEVEqdJq5BHiejp2ERTZShLAWBRQpVxqJ4WFyWjWDxWnXKLq0khLiru5dixN4k/mQtWmr3Iszfif2ELjFpWHaegmZhgi2pnclXwsaA9LEG1BEUzStRA8SrEvTyjZRrWAxoA4JLmpoeQNXfaD0yAAANNHp4afqB9mhsdqwbrRFg8KJIZS31/GTUGzJ47vCzIf9LMilNArV9CKecMDi1BYQkJUp2HDTTUSRzp5Rrs5JE7HKn2Qi5NBQBz0YP5w/p3c1X37i8qaTsT574cdiEgP/qFX+8BR9zaFysKXJ1MLkUavMh/SIsTiTNxU2cVkpmzFKSBRkknSC3Jh5c4LXJcUUU70YuOJ1A7Rvs53nQmzRIKTHoH8OMQFyJNFOhwau+n2a1IoOJk7Ev1i2dgpksSmQSFBRCyTQE1cPQUAoOMLyuotjcK9Wz0r+YdwUqb0gkt0itqzJKElGp+Bf6ktAOO7RYeQka5qUEbag/HrHMg5Xs6Eu2tB3aeQVy1ISQCqo4DiS9hHn+BMzCqKZy06H1FzQi9KUHN432l/iGhaGkjWXINwGINXIrXaKRjMdNxKQJiqIHhAs34vofKHwwTkqek/vgH8VGP6jTOs0VjZoSHEpOrSH+KoqR5UjrDBCQCCxBDsK+YvBuSZSJUlM2aCkrIEtP4lczwTueQgnEZeogqOlKUliVEgCoDuQ1yBSNEMmOMai9LX37nPnNzbbBpiknxp+GgfyZuVrGAQkqmBI++P0EMFo7pSk0exsQeNqEQ27Kqw4miWpOhSjRTuCTUAvbgOsOg1Kk2Lk2lo6wuWTlXUyfyh+G5v9OUXDA5EJSACAfFbe+q/H9of4LAJSzcYM7io2AL+bEH2joxxqPymfuv5gXDS3Uaigbw7Guqr0uOFozGUQqhLDhXy8qQTLTc8Ttw2jgEEHbj+/wB8YOikwSTmCQlIUQFAB6i7VjUBY3CIK1EywSau3EPGQvukh3bFgU7EKSl2qz+4ZNNyqw6DeI58iZLlMPFMVVRp8RDAdB9OcSSkEq1GoQfVdQTzCR4er8Iyesl23pQl3NP8RT9ylzRvLkEIck0o/EhgVdXEaSSSPiI47dALMOPIcYlQl0gXAA3O1j8/QQUhgANz7dd4KPAMuTSlhq0AqSeAqTFI7TIPdJmn4pqwpjshiEJ5eFiRxUqLdmCdQRK/O5X/APqQ2of3HSjoo8IT9tMv1SCsP4Tqq2z26v7RMu4tAQVMoYQLj0giUhKAqYsAgUCT+NRsOgoT5C5ER4KVrOkkJAckmwSKknoKxrGze8VvoSNKBwTxP6ianyGwjmt+Eaq8i6dMUtRUtdSa/wCAKDoIHl4tUpaZqFkKQQQTanHkbNziWcluJPDf0juXlSl+JdqnkP3N/SDhFvgq6PTsJiJOaYVKkEa0hmLOP0Hmk/C/xAtvFMxeAmypikIdJQSbVFqk3a3qYq+CzCfgZxXJVoO4PwrTsFDce42aPQcv7aYHGJ0Yn/6eazaiaUrSZwoKKbqYVmw/E2uTVjy1piPDT1pUFKPhILkUc0B6e0OcZiNRsvxAaVAOWFA6RtwgnFdk5pAVImS50t3Dno7GqS5peOpGT4tBOmWE6meoIBfTRuYp0jDPBkvhmyOWHNkEqadRB8Qer8wfCRxttBSpi0AF01vSpdhR7x2js/iVlu7BJsoni9bk7e/SJMRl8nDjXj8XLllqJCvGzD4UjxGpNkvDY9PkfgW8sV5ApMmZOWES/wDzDQlNkJ58zS1YLzvHSMPLVl0pYM1aT3y3+EmuhR4n8XAEjeK5nf8AEMJQZGXS+4QbzlN3pH6RXQ4/E5U3CK5lU1buC5vsqvHeNWPCsa/P3MuXK5B2DSwJIKSklOk7KFx5QwSSafi+6xJmUkzO6mhNVMhYAZleIhTbOAX5o5xGpJSmjFixqx6fe/rBqX7iKsHxaaFgeZ61Af8A4sekJsPmM3DrUZSm1UINjwLcecWmRKkqqtM0BzUhJT5vp+cAzuzxmuqXNlrG5BII6pZxCpZ8fDCUkiu4nP8AEKoqctL/AJQlj5UPvAv8iVuVTUFRqCtRSp+eqwI58IumG7FlTHXUX0JqN6aqDrB+E7GSUVUhz/8Akmj1IS8Z31mGPykeS+SiYbKZgNUkpVR0+IVsXS4LGvlFnyPJUSAF4j4vwyg5UTwIFfKLAEyMPUrlIH5ZI8R/vUHgBPaRlEYWQkqP4iNR81FzGfJ1WTKqiqQtysOw2XLVMOLxhTKlpS0uU9Qnd9kuwtsIVdqMyUtIQkMZhBCW+GWkginElj0aJsXi2HeYk95NulP4EnYFNj1NoyT3M/8AGsTH1Po1JfevhUARyO12iYINyUpcLj2IlYhxLgoJ3SPbwn5RNPQNXkPkIPzDJphDIAWUnUND1BuACAomgLNtCuaSFJd3ZiDQuDZjyI9Y6a7WEz1nsJnBnyNKi65R0k7kADSr0p1BixrUwrHnf8JySvEPQESz5gzI9DnqAKRuosOoGr/2x0cMrgmzLNeokQmNKGzPHYEcqMNBF07CBSiom/6QbUvpjIPQzW+ntGoqkX3MrgZCANrcTW177V6wDjS2gIua33LgFvM2g7CydaB4ypiSSacfbaNzJOr4WcBg9utvt4TJNofFpPZIhDJGzCvIDp90iWVL34wvlS161J3YOS5B4jh6cTGZjMJQiUg+KarQ9mT/AOoun6XbmRBxloCUQnLRr1T/APqEBHKUh9PqXV/eOEbzJJOlAY6jXkBu/X5wUFgAaaJDNsG4ekCBesHTXibWex6v71g3xQtc2U/MezEx1Jk6dBNyS4A/C3C3oI3g+xW8xZIpanW33WLkohIDACu3ufrHJU4b3F7U8/rCY4oJ3Q1yk0Vg9mpQ+AJFWe52JHW8CZnlADUKgGFTUdALmvyi2ztKUkmyXJYWa9oX4mWFIA2NaWIFRXhBuKZSk0eYdpctCACNiH86fQRV5suL72lxAE7SdJQB400dzRI8rxV8fhgkpKQ4IGprBW7RhnKKnSNUYT7baYvy/ETpRUZUxaCA50LUl6gD4TWphlL7Z5imgxk7/c/uYjTIaSpWxUlIIuQylMPPjAsrDFR8IYcf3MRTIwuf2nx8wePFzyOBmKA9AQDC0yi7qck159Yd4LKCa1J4kfIfU8YKn5IU160L1b35wfZNqwHNIRysM5f7+cNcuy9alDQFE8gPcvSDcHgks497g8DEWKUQGBV0BYekZ5Sl4I9lokMmWqXMmIUFJKSl6h7EGoBBYgvtG8NImNTFAcLqb/cPZ4o6kr4DzmH947Vg8QZRmJ1DSplCpYGqVA8HBHpxhM8be5U/oDT9y5HKpin1Y0Eqv/p//KA8R2VWk6kYwIUN9G3UKhJlGSYub4lK0ywaq+grFsRKw0hPxFShuo1fzjJkksbpVYO0LRgsYPBLxWt7q0qHzNYjnZYpFZ+JUp76fXrGsz7SlVEW5WhFMmYiZ4R1q5hmLp8s99tfQumN5czCoqJZWQfxF38uEcYntQEjQjShyzIo/U3hRLyiaT/qK8hQe0F4XJCSdKQwcvpFhvURrj0TfJKXk4TilzFl0lQBNqj1+sFTcxKfClidkiwPFR36D2iSXlSyXW5SDZz7CzP8oYS8laYhJQWOp/Jrfe8Pj01IJNAGFx09ZSdCaclBzxcF/SkWXB5ZicQCpQlqSkhkqd00ei31D5UtDjIslCwTpICg4BSw4EfO0PBLEmU4Du9LuFKCQ3lRuZh34eFW0V3O6RB2EydUjvFrTp16WTqBoNRuAHDmkWooBIPC3y+XziGSSEh6ffOOpalEkEMNi941QioxSRnm23ZIOsczT1jH5dfv6xziUkjwljx9DBeAVyR96BQGMhfNm1qpiwcAkh2D1aNwHeh3wmC96kA6QWBbqeH0iPMJhRLJSWKWPuPD0aC5JcH7ru3KAsdMGlSXtQ9dNAOcDLUSo7kFYWWCHO9WPA16W+UL8vPeT1zR8CXlofgD4z5keYAjufOIw6QlXjWAhJ/URUtyDn+2JcJhAiWJQowqeG1Og+URbouqslnFJ3oOG9qU3iUpYBqDhyG0LcWheoEJChZLWSBanl79IMkoUWBNdz67m/8AmL7rZXbSI52pVRTby3P1jrSwata+UdAePSzgV5Ddn+7GNrLAkA/8REiN+CndpswK5qsNrKEMAWuSoPU3ZjaF2NxZwidMqaZiSlvGXIJoCOl2Ea7V4ZS8SNLBwHPT6/tC7PMiUmWlYmFW5SeA6Wjg9RknHqac6PT9NDDLp4vsvW9csGy+fLr3g1Pd9y7/ADifPcxTOruGAADBoVYTKcRM+CWpQ2PHpECNaZmhSTqH4SD5W2gVjTlSe0dKfW4Vjcn7EysMo6ZBSpJKlTC42UEpHyNekPsFkRZmbhwHH14xZ5ciQpSF6klekPVy1KAfSGuHkpZnsC4ND6fdo7EI44yq9nipOb3Wit4fLBq0BNgx4tufp5xNLwJWgkgAg1B5khv9rCHOXgkKVpcEEktajgFuvsYMmYdSZdZfduUgODzIHoPYw5NNWC4tOjznMMtWlTocXqN6gBxw5co4w+LD6ZoSDZyGBPF7JPt8o9FxWWpISG/CA55VPnag/MIq2K7Pusslyp9I3J2AH3tCcmDu2WpUBS8KlWyG6j2YGNLnycM5WQCsaTLDVDuNR2qH4jlAH8pNlABBLHZ2Ln8pqxgCZlyS6ymYGUUErLssVKXsaEU5xhzYp8N6+/2CTT4JM27STFKKEJ06aaRZLchSEZkTJpq5fjaH+PkNomKDBYYqo61p8JLC1G/y9WfZnL+8mAn4B6Ur829IrBiSrtQTXaG5PkKEoCdIKh+336w3l5OgO6GPLpDvC4FIajqe/nU8ONY6xhagGoXbfzPWOupJIT8O3yIk5YlQYaBqJoeFa9WYtziQZSQkMO73JNqefE2gpgsy9LAh/Cf7b15kiGGEmrJYC79SN68CaekB3JjOygKTkwI0irNuLUJP3wiTEYMSxrrRQ50NDS2/tDHD4YlI1KLvd77vbi7dYhzYpMsI3dPsQXPlvFuWilH1BeEUEpSCQCwJAHxEip9QfSJsYwoGcNpqKUagdnb6cYiQpA0uegZ3Bpbhb2grWNQcVrW1H5Wq1eY5xZXkKQQ1bc4gmatQ07aWv8JPifp+0EUa335xgWxSGqr2o8MEnU0+JI4vtwBjpSqR0DWIi+9L7/f2YsFEKcM9SSHJO255xkSHr9+sZA0HbE6wQUkUSHBAtZh98+UQTUAlX6QS54kXblGRkLkMjwB5SkTVgj4ZKRLSP1KCVLVzoUpD/q4wznLqAwb/AC3zjIyJH5EXL52jmeprJJAFnG21Y7w61M6gASWblap6xkZFrkF8HRP39/dIV9oc2EpIo6lFgLV3c8IyMhXVZJY8MpR5NHQYo5eojCXH/hW0ZcmaFTiopWTsVN5AkgdIqmfY+YhRlKLnlYgxkZHmum/3c6U92r/k9Pmn8CElj1XA4y7PBLSAODWtDjJcMnEFS9KXIISTsA7+8ZGQzGvhZFKPP9nL6ncN+QTEpRhZiAgBygajupQJc+8OMLj+/mJfz6biMjItevqYX5aZnqsT/RjuTIL0FASbngA7C4paOJeJIQG0/CgEVZ0oUgAjcVB6gRkZHoZaMMNhKMUtWpVPxE1qPCgNYOKW3pWkbmz5jjwpJUp/iNNJCwA4bZhwBasZGRdKim9kc2UpQACAdIbxEAA6ZkssA/hAWWHIQNNkzXohAfUBWg1lNQCCBaoYvqVxjIyD7I0L7nZWsP2ZKlnCzVAiUgTtQuO8JQEAHjoJd6Ra8syeXKQAgAWA/ccI3GQuGOMLpBttoNGGADE+l26wKfEWDBvlb5D1MZGQbIgFOHUiYSo3/wA/Jm2oYbYKT4QohiU//wBeJveMjIqK2XJ6DWAAAvSkVzPpE1M2WpBHjDNzB58jGRkTKvSVifqDsEVTElSkAFrPfhuzU9zBehStOlbEPtQt98flGRkSKI2MEBVHILCvF6VjMQgvLIainPRiKeZjIyH+DPeyPMZaiEFBNFAqDs6d/R3iLCKGohiDdyXuz9LRkZAS5DjuJubIDm/koj2eNxkZBUiJs//Z" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी अंगाकर रोटी">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">अंगाकर रोटी छत्तीसगढ़ का एक पारंपरिक और पौष्टिक व्यंजन है, जो मुख्य रूप से चावल के आटे से तैयार किया जाता है। यह रोटी विशेष रूप से ग्रामीण क्षेत्रों में लोकप्रिय है और इसे आमतौर पर नाश्ते या हल्के भोजन के रूप में खाया जाता है। अंगाकर रोटी नरम और स्वादिष्ट होती है, और इसे विभिन्न प्रकार की चटनी, सब्जी या दाल के साथ परोसा जाता है। इसकी सादगी और पौष्टिकता इसे हर उम्र के लोगों के बीच पसंदीदा बनाती है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">अंगाकर रोटी की उत्पत्ति छत्तीसगढ़ के आदिवासी और ग्रामीण समुदायों से हुई है, जहाँ चावल स्थानीय भोजन का मुख्य हिस्सा रहा है। यह व्यंजन उन दिनों से बनाया जाता था जब लोग सस्ती और आसानी से उपलब्ध सामग्री का उपयोग करके पौष्टिक भोजन तैयार करते थे। अंगाकर रोटी को अक्सर खेतों में काम करने वाले लोग अपने साथ ले जाते थे, क्योंकि यह आसानी से बनने वाला और लंबे समय तक ताज़ा रहने वाला व्यंजन है। समय के साथ, यह छत्तीसगढ़ की खानपान संस्कृति का एक महत्वपूर्ण हिस्सा बन गया।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">एक अंगाकर रोटी (लगभग 100 ग्राम) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 150-180 किलो कैलोरी (तेल या घी की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 25-30 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 3-4 ग्राम</li>
+                                <li><strong>फैट</strong>: 4-6 ग्राम (तेल या घी के उपयोग पर निर्भर)</li>
+                            </ul>
+                            <p class="card-text">कम तेल में बनाई गई अंगाकर रोटी स्वास्थ्यवर्धक और संतुलित आहार का हिस्सा हो सकती है।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>पौष्टिक और हल्का</strong>: चावल के आटे से बनी यह रोटी आसानी से पचने वाली और पौष्टिक होती है।</li>
+                                <li><strong>ग्लूटन-मुक्त</strong>: गेहूं के बजाय चावल का उपयोग इसे ग्लूटन-एलर्जी वाले लोगों के लिए उपयुक्त बनाता है।</li>
+                                <li><strong>ऊर्जा प्रदान करता है</strong>: कार्बोहाइड्रेट की उच्च मात्रा के कारण यह लंबे समय तक ऊर्जा प्रदान करता है।</li>
+                                <li><strong>किफायती और स्थानीय</strong>: स्थानीय सामग्री से बना यह व्यंजन किफायती और क्षेत्रीय संस्कृति को दर्शाता है।</li>
+                                <li><strong>बहुमुखी</strong>: इसे विभिन्न प्रकार की चटनी, दाल या सब्जियों के साथ परोसा जा सकता है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> 1 कप चावल का आटा, नमक, पानी, तेल या घी।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> चावल के आटे में नमक और पानी मिलाकर नरम आटा गूंथें। छोटी लोइयाँ बनाएँ, रोटी बेलें और तवे पर दोनों तरफ सुनहरा सेंकें।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी अंगाकर रोटी रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>चावल का आटा – 1 कप</li>
+                        <li>पानी – आटा गूंथने के लिए (आवश्यकतानुसार)</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>तेल या घी – तवे पर सेंकने के लिए</li>
+                        <li>प्याज – 1 मध्यम, बारीक कटा (वैकल्पिक, स्वाद के लिए)</li>
+                        <li>हरा धनिया – 1-2 चम्मच, बारीक कटा (वैकल्पिक)</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>आटा तैयार करें</strong>: एक बड़े कटोरे में चावल का आटा लें। इसमें स्वादानुसार नमक और बारीक कटा प्याज, हरा धनिया (वैकल्पिक) डालें। धीरे-धीरे पानी डालकर नरम और चिकना आटा गूंथें। आटा न ज्यादा सख्त हो न ज्यादा नरम।</li>
+                        <li><strong>लोइयाँ बनाएँ</strong>: आटे को छोटी-छोटी लोइयों में बाँट लें।</li>
+                        <li><strong>रोटी बेलें</strong>: प्रत्येक लोई को सूखे चावल के आटे का उपयोग करके गोल और पतली रोटी की तरह बेलें।</li>
+                        <li><strong>तवा तैयार करें</strong>: तवे को मध्यम आँच पर गरम करें और उस पर थोड़ा तेल या घी लगाएँ।</li>
+                        <li><strong>रोटी सेंकें</strong>: बेली हुई रोटी को तवे पर डालें और मध्यम आँच पर दोनों तरफ से सुनहरा और हल्का कुरकुरा होने तक सेंकें। प्रत्येक तरफ 1-2 मिनट पर्याप्त हैं।</li>
+                        <li><strong>परोसें</strong>: गरमागरम अंगाकर रोटी को हरी चटनी, टमाटर की चटनी, दाल या सब्जी के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            p>ABVP NEC -  2025 </p><br>
+            <p>भोजन गठ </p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+       document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - करी लड्डू</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी करी लड्डू</h1>
+            <p class="lead">एक पारंपरिक और स्वादिष्ट मिठाई</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसीपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://5.imimg.com/data5/FY/VL/XK/ANDROID-26888782/img-20200116-101400-jpg.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी करी लड्डू">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">करी लड्डू, जिसे बेसन सेव लड्डू के नाम से भी जाना जाता है, छत्तीसगढ़ की एक पारंपरिक मिठाई है। इसे बेसन, घी, चीनी और कुचली हुई सेव के साथ बनाया जाता है, जो इसे एक अनोखा कुरकुरा स्वाद देता है। यह मिठाई विशेष रूप से दीवाली, होली जैसे त्योहारों और सर्दियों में बहुत लोकप्रिय है। करी लड्डू की सादगी और स्थानीय सामग्री का उपयोग इसे छत्तीसगढ़ी घरों में खास बनाता है। इसका स्वाद और बनावट बच्चों और बड़ों दोनों को पसंद आता है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">करी लड्डू की शुरुआत छत्तीसगढ़ के ग्रामीण और आदिवासी समुदायों से हुई, जहाँ बेसन और सेव जैसी आसानी से उपलब्ध सामग्री से मिठाइयाँ बनाई जाती थीं। यह मिठाई सर्दियों में शरीर को गर्मी और ऊर्जा देने के लिए तैयार की जाती थी। समय के साथ, करी लड्डू छत्तीसगढ़ी त्योहारों और उत्सवों का महत्वपूर्ण हिस्सा बन गया, जो आतिथ्य और सामुदायिक भावना को दर्शाता है। सेव का उपयोग इसे अन्य बेसन लड्डुओं से अलग करता है और इसे विशिष्ट क्षेत्रीय पहचान देता है।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">करी लड्डू (लगभग एक लड्डू, 30 ग्राम) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 130-160 किलो कैलोरी (घी और चीनी की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 15-18 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 2-3 ग्राम</li>
+                                <li><strong>फैट</strong>: 6-8 ग्राम</li>
+                                <li><strong>विटामिन्स</strong>: विटामिन B समूह (बेसन से)</li>
+                                <li><strong>खनिज</strong>: आयरन और मैग्नीशियम (बेसन से)</li>
+                            </ul>
+                            <p class="card-text">करी लड्डू एक ऊर्जावान मिठाई है, जो सीमित मात्रा में खाने पर स्वास्थ्य के लिए लाभकारी हो सकती है।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>ऊर्जा प्रदान करता है</strong>: घी और चीनी तुरंत ऊर्जा देते हैं।</li>
+                                <li><strong>प्रोटीन का स्रोत</strong>: बेसन में प्रोटीन होता है, जो मांसपेशियों के लिए अच्छा है।</li>
+                                <li><strong>सर्दियों में लाभकारी</strong>: घी और बेसन शरीर को गर्म रखते हैं।</li>
+                                <li><strong>स्थानीय और टिकाऊ</strong>: स्थानीय सामग्री से बनी यह मिठाई पर्यावरण के अनुकूल है।</li>
+                                <li><strong>लंबे समय तक ताजा</strong>: हवाबंद डिब्बे में यह लड्डू कई हफ्तों तक ताजा रहता है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> बेसन, बारीक सेव, घी, चीनी, इलायची, मेवे।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> बेसन को घी में भूनें, कुचली हुई सेव और चीनी मिलाएँ, मेवे व इलायची डालकर लड्डू बनाएँ।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी करी लड्डू रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>बेसन (चने का आटा) – 1 कप (लगभग 150 ग्राम)</li>
+                        <li>बारीक सेव (बेसन की) – 1/2 कप, हल्की कुचली हुई</li>
+                        <li>घी – 1/2 कप</li>
+                        <li>पिसी चीनी (बूरा) – 3/4 कप</li>
+                        <li>इलायची पाउडर – 1/2 चम्मच</li>
+                        <li>बादाम – 2 चम्मच, बारीक कटे हुए</li>
+                        <li>काजू – 2 चम्मच, बारीक कटे हुए</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>बेसन भूनें</strong>: एक कड़ाही में 1/4 कप घी गरम करें। बेसन डालें और मध्यम आँच पर लगातार चलाते हुए सुनहरा और सुगंधित होने तक भूनें (लगभग 8-10 मिनट)।</li>
+                        <li><strong>सेव तैयार करें</strong>: बारीक सेव को हल्का कुचल लें। यदि ताजी सेव बनाना चाहते हैं, बेसन को तेल में तलकर बारीक सेव बनाएँ और ठंडा होने दें।</li>
+                        <li><strong>मिश्रण बनाएँ</strong>: भुने हुए बेसन में कुचली हुई सेव डालें और अच्छी तरह मिलाएँ। बचा हुआ घी डालकर 2-3 मिनट तक और भूनें।</li>
+                        <li><strong>चीनी और मेवे डालें</strong>: कड़ाही को आँच से हटाएँ और मिश्रण को हल्का ठंडा होने दें। पिसी चीनी, इलायची पाउडर, कटे हुए बादाम और काजू डालकर अच्छी तरह मिलाएँ।</li>
+                        <li><strong>लड्डू बनाएँ</strong>: मिश्रण के हल्का गर्म रहने पर छोटे-छोटे हिस्सों में लें। हथेलियों पर थोड़ा घी लगाकर गोल लड्डू बनाएँ।</li>
+                        <li><strong>परोसें</strong>: लड्डुओं को पूरी तरह ठंडा होने दें और परोसें। इन्हें हवाबंद डिब्बे में 2-3 सप्ताह तक रखा जा सकता है।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>

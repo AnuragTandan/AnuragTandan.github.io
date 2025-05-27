@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - मुनगा सब्जी</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+            height: 450px;
+            background-position: center;
+            object-fit: cover;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी मुनगा सब्जी</h1>
+            <p class="lead">एक पौष्टिक और स्वादिष्ट व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://i.pinimg.com/736x/fe/ad/46/fead463f88f37b6eedac80733024eb4b.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी मुनगा सब्जी">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">मुनगा सब्जी, जिसे सहजन या ड्रमस्टिक सब्जी के नाम से भी जाना जाता है, छत्तीसगढ़ का एक लोकप्रिय और पौष्टिक व्यंजन है। यह मुनगा की फलियों से बनाया जाता है, जो अपने औषधीय गुणों और स्वाद के लिए प्रसिद्ध हैं। यह सब्जी आमतौर पर आलू, टमाटर, और स्थानीय मसालों के साथ तैयार की जाती है और चावल या रोटी के साथ परोसी जाती है। मुनगा की फलियाँ और पत्तियाँ दोनों ही छत्तीसगढ़ के ग्रामीण और शहरी रसोईघरों में उपयोग होती हैं, जिससे यह एक बहुमुखी और स्वास्थ्यवर्धक व्यंजन बनता है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">मुनगा सब्जी की उत्पत्ति छत्तीसगढ़ के आदिवासी और ग्रामीण समुदायों से हुई है, जहाँ मुनगा का पेड़ आसानी से उगता है। इसकी फलियाँ, पत्तियाँ, और फूल पारंपरिक व्यंजनों में उपयोग किए जाते हैं। मुनगा को इसके पौष्टिक और औषधीय गुणों के कारण प्राचीन काल से महत्व दिया जाता रहा है। यह व्यंजन विशेष रूप से उन क्षेत्रों में लोकप्रिय है जहाँ लोग स्थानीय और मौसमी सामग्री पर निर्भर हैं। समय के साथ, मुनगा सब्जी छत्तीसगढ़ की खानपान संस्कृति का एक अभिन्न हिस्सा बन गई।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">मुनगा सब्जी (लगभग 100 ग्राम, पकाई हुई) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 60-80 किलो कैलोरी (तेल की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 8-10 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 2-3 ग्राम</li>
+                                <li><strong>फैट</strong>: 2-4 ग्राम (तेल के उपयोग पर निर्भर)</li>
+                                <li><strong>विटामिन्स</strong>: विटामिन A, C, और K</li>
+                                <li><strong>खनिज</strong>: कैल्शियम, पोटैशियम, आयरन, और मैग्नीशियम</li>
+                            </ul>
+                            <p class="card-text">मुनगा में 92 प्रकार के मल्टीविटामिन्स और 46 प्रकार के एंटीऑक्सीडेंट्स होते हैं, जो इसे अत्यंत पौष्टिक बनाते हैं।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>प्रतिरक्षा बढ़ाए</strong>: विटामिन C और एंटीऑक्सीडेंट्स इम्यूनिटी को मजबूत करते हैं।</li>
+                                <li><strong>हड्डियों के लिए लाभकारी</strong>: कैल्शियम और मैग्नीशियम हड्डियों को मजबूत करते हैं।</li>
+                                <li><strong>ब्लड शुगर नियंत्रण</strong>: मुनगा ब्लड शुगर को नियंत्रित करने में मदद करता है।</li>
+                                <li><strong>गर्भवती महिलाओं के लिए फायदेमंद</strong>: पोषक तत्व माँ और बच्चे दोनों के लिए लाभकारी हैं।</li>
+                                <li><strong>पाचन में सहायक</strong>: फाइबर की मात्रा पाचन को बेहतर बनाती है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> मुनगा फलियाँ, आलू, प्याज, टमाटर, लहसुन, सरसों का तेल, मसाले।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> मुनगा और आलू को काटें। तेल में प्याज, लहसुन, और टमाटर भूनें। मसाले और मुनगा-आलू डालकर पकाएँ।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी मुनगा सब्जी रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>मुनगा (सहजन) फलियाँ – 4-5, 2-3 इंच के टुकड़ों में कटी</li>
+                        <li>आलू – 1 मध्यम, छोटे टुकड़ों में कटा</li>
+                        <li>प्याज – 1 मध्यम, बारीक कटा</li>
+                        <li>टमाटर – 1 मध्यम, बारीक कटा</li>
+                        <li>लहसुन – 5-6 कलियाँ, बारीक कटी या पेस्ट</li>
+                        <li>हरी मिर्च – 1-2, बारीक कटी</li>
+                        <li>सरसों का तेल – 2-3 चम्मच</li>
+                        <li>सरसों के दाने – 1 चम्मच</li>
+                        <li>हल्दी पाउडर – 1/2 चम्मच</li>
+                        <li>लाल मिर्च पाउडर – स्वादानुसार</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>तेज पत्ता – 1 (वैकल्पिक)</li>
+                        <li>हरा धनिया – गार्निश के लिए</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>सामग्री तैयार करें</strong>: मुनगा फलियों को छीलकर 2-3 इंच के टुकड़ों में काटें और अच्छे से धो लें। आलू को छोटे टुकड़ों में काटें। प्याज, टमाटर, लहसुन, और हरी मिर्च को बारीक काट लें।</li>
+                        <li><strong>तेल गरम करें</strong>: एक कड़ाही में सरसों का तेल गरम करें। इसमें सरसों के दाने और तेज पत्ता (यदि उपयोग कर रहे हैं) डालें। सरसों के चटकने तक प्रतीक्षा करें।</li>
+                        <li><strong>प्याज और लहसुन भूनें</strong>: कटा हुआ प्याज और लहसुन डालें। प्याज को सुनहरा होने तक भूनें। हरी मिर्च डालकर 1 मिनट और भूनें।</li>
+                        <li><strong>टमाटर और मसाले डालें</strong>: कटा हुआ टमाटर, हल्दी पाउडर, लाल मिर्च पाउडर, और नमक डालें। टमाटर के नरम होने तक पकाएँ, जब तक मसाला तेल न छोड़ दे।</li>
+                        <li><strong>मुनगा और आलू पकाएँ</strong>: कटे हुए मुनगा और आलू डालें। अच्छे से मिलाएँ और 2-3 मिनट तक भूनें। थोड़ा पानी (लगभग 1/2 कप) डालें, ढककर मध्यम आँच पर 15-20 मिनट तक पकाएँ, जब तक आलू और मुनगा नरम न हो जाएँ।</li>
+                        <li><strong>परोसें</strong>: हरे धनिये से गार्निश करें और गरमागरम चावल या रोटी के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>

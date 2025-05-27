@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - फरा</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी फरा</h1>
+            <p class="lead">एक पारंपरिक और स्वादिष्ट व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://i.pinimg.com/736x/64/d4/6d/64d46da3839aac33fda29bac194876fd.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी फरा">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">फरा छत्तीसगढ़ का एक पारंपरिक और लोकप्रिय व्यंजन है, जो मुख्य रूप से चावल के आटे से बनाया जाता है। इसे नाश्ते, स्नैक्स या मुख्य भोजन के रूप में खाया जाता है। यह स्वादिष्ट, हल्का और पौष्टिक होता है, जो बच्चों से लेकर बड़ों तक सभी को पसंद आता है। फरा को भाप में पकाया जाता है और इसे विभिन्न प्रकार की चटनी, जैसे टमाटर या हरी चटनी, के साथ परोसा जाता है। छत्तीसगढ़ को "धान का कटोरा" कहा जाता है, और चावल से बने इस व्यंजन का राज्य की संस्कृति में विशेष स्थान है।</p>
+                            
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">फरा छत्तीसगढ़ की समृद्ध खाद्य संस्कृति का हिस्सा है और इसका इतिहास राज्य की कृषि-प्रधान जीवनशैली से जुड़ा है। चावल छत्तीसगढ़ का प्रमुख अनाज है, और फरा जैसे व्यंजन इसकी प्रचुरता का प्रतीक हैं। यह व्यंजन विशेष रूप से त्योहारों, जैसे दीवाली और लक्ष्मी पूजा, के दौरान बनाया जाता है। कुछ लोग इसे उत्तर प्रदेश और अन्य क्षेत्रों में भी बनाते हैं, जहां इसे अलग-अलग नामों जैसे "पिठ्ठी" या "गुजिया" से जाना जाता है, लेकिन छत्तीसगढ़ी फरा की बनावट और स्वाद इसे अनूठा बनाता है। यह व्यंजन पीढ़ियों से चला आ रहा है और ग्रामीण क्षेत्रों में आज भी उतना ही लोकप्रिय है।</p>
+                            
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">फरा की कैलोरी सामग्री उपयोग की गई सामग्री और परोसने के तरीके पर निर्भर करती है। औसतन, एक मध्यम आकार के फरा (लगभग 50 ग्राम) में लगभग 100-120 कैलोरी होती है। यदि इसे तेल में तला जाता है, तो कैलोरी की मात्रा बढ़कर 150-180 कैलोरी प्रति टुकड़ा हो सकती है।</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 100-120 किलो कैलोरी (भाप में पकाने पर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 15-20 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 3-4 ग्राम (चना दाल से)</li>
+                                <li><strong>फैट</strong>: 2-5 ग्राम (तेल या घी के उपयोग पर निर्भर)</li>
+                            </ul>
+                            <p class="card-text">चना दाल की स्टफिंग और भाप में पकाने की विधि इसे कम कैलोरी वाला बनाती है, जो इसे हल्का और स्वस्थ नाश्ता बनाता है।</p>
+                            
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>पौष्टिक और हल्का</strong>: चावल और चना दाल से बना फरा कार्बोहाइड्रेट और प्रोटीन का अच्छा स्रोत है, जो ऊर्जा प्रदान करता है।</li>
+                                <li><strong>पाचन में आसान</strong>: भाप में पकाने की वजह से यह आसानी से पच जाता है और पेट के लिए हल्का होता है।</li>
+                                <li><strong>कम तेल</strong>: भाप में पकाया हुआ फरा कम तेल में तैयार होता है, जो इसे स्वास्थ्य के लिए फायदेमंद बनाता है।</li>
+                                <li><strong>ग्लूटेन-मुक्त</strong>: चावल के आटे से बना होने के कारण यह ग्लूटेन-मुक्त है, जो ग्लूटेन असहिष्णुता वाले लोगों के लिए उपयुक्त है।</li>
+                                <li><strong>लोकल सामग्री</strong>: स्थानीय और आसानी से उपलब्ध सामग्री से बनने के कारण यह किफायती और सुलभ है।</li>
+                                <li><strong>सांस्कृतिक महत्व</strong>: फरा छत्तीसगढ़ की संस्कृति को दर्शाता है और इसे त्योहारों पर बनाना सामुदायिक एकता को बढ़ावा देता है।</li>
+                            </ul>
+                            
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> चावल का आटा, चना दाल, घी या तेल, हरी मिर्च, अदरक, जीरा, राई, करी पत्ता, हल्दी पाउडर, नमक, टमाटर (वैकल्पिक), हरा धनिया।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> चावल के आटे से नरम आटा गूंथें, चना दाल की स्टफिंग तैयार करें, फरा बनाकर भाप में पकाएं, तड़का लगाएं और चटनी के साथ परोसें।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी फरा रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>चावल का आटा – 1 कप</li>
+                        <li>चना दाल – 1/2 कप (4-5 घंटे भिगोई हुई)</li>
+                        <li>घी या तेल – 2 बड़े चम्मच</li>
+                        <li>हरी मिर्च – 2-3 (बारीक कटी हुई)</li>
+                        <li>अदरक – 1 छोटा चम्मच (कद्दूकस किया हुआ)</li>
+                        <li>जीरा – 1/2 छोटा चम्मच</li>
+                        <li>राई (सरसों) – 1/2 छोटा चम्मच</li>
+                        <li>करी पत्ता – 8-10</li>
+                        <li>हल्दी पाउडर – 1/4 छोटा चम्मच</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>टमाटर – 1 (बारीक कटा, वैकल्पिक)</li>
+                        <li>हरा धनिया – बारीक कटा हुआ (सजावट के लिए)</li>
+                        <li>पानी – आवश्यकतानुसार</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>चावल के आटे का आटा तैयार करें</strong>: एक बड़े बर्तन में चावल का आटा लें। इसमें स्वादानुसार नमक और 2 बड़े चम्मच घी डालकर अच्छे से मिलाएं। गर्म पानी का उपयोग करके नरम आटा गूंथ लें। आटे को ढककर 10-15 मिनट के लिए रख दें।</li>
+                        <li><strong>चना दाल की स्टफिंग तैयार करें</strong>: भिगोई हुई चना दाल को मोटा-मोटा पीस लें। एक पैन में 1 चम्मच तेल गर्म करें। इसमें जीरा, हरी मिर्च, अदरक और हल्दी पाउडर डालकर भूनें। पिसी हुई चना दाल डालें, स्वादानुसार नमक डालकर 3-4 मिनट तक भूनें। स्टफिंग तैयार है, इसे ठंडा होने दें।</li>
+                        <li><strong>फरा बनाएं</strong>: चावल के आटे की छोटी-छोटी लोइयां बनाएं और इन्हें पतला बेल लें। प्रत्येक लोई में 1-2 चम्मच चना दाल की स्टफिंग भरें, फिर इसे आधा मोड़कर किनारों को अच्छे से चिपका दें।</li>
+                        <li><strong>भाप में पकाएं</strong>: एक कढ़ाई में पानी गर्म करें और उसमें एक जाली या स्टीमर रखें। जाली पर हल्का तेल लगाएं ताकि फरा चिपके नहीं। फरा को जाली पर रखें और ढककर 8-10 मिनट तक भाप में पकाएं। पकने के बाद फरा को निकाल लें।</li>
+                        <li><strong>तड़का लगाएं</strong>: एक कढ़ाई में 2 चम्मच तेल गर्म करें। इसमें राई, जीरा, करी पत्ता और सूखी लाल मिर्च डालकर चटकाएं। वैकल्पिक रूप से टमाटर डालकर पका लें। अब पके हुए फरा को काटकर इसमें डालें और 3-4 मिनट तक भूनें।</li>
+                        <li><strong>परोसें</strong>: हरे धनिए से सजाकर गरमागरम फरा को टमाटर की चटनी, हरी चटनी या लहसुन की चटनी के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC -  2025 </p><br>
+            <p>भोजन गठ </p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+       document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी खाद्य - जिमीकंद सब्जी</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी जिमीकंद सब्जी</h1>
+            <p class="lead">एक पौष्टिक और स्वादिष्ट व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://d1xx0c244jch9c.cloudfront.net/wp-content/uploads/2024/10/jimikand-Sabji.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी जिमीकंद सब्जी">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">जिमीकंद सब्जी, जिसे अरबी या कोलोकैसिया रूट सब्जी के नाम से भी जाना जाता है, छत्तीसगढ़ का एक पारंपरिक और पौष्टिक व्यंजन है। यह जिमीकंद (कोलोकैसिया) की जड़ों से तैयार किया जाता है, जो अपने अनूठे स्वाद और मुलायम बनावट के लिए प्रसिद्ध हैं। यह सब्जी आमतौर पर स्थानीय मसालों, प्याज और टमाटर के साथ बनाई जाती है और चावल या रोटी के साथ परोसी जाती है। जिमीकंद की आसान उपलब्धता और सरल तैयारी इसे छत्तीसगढ़ी घरों में लोकप्रिय बनाती है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">जिमीकंद सब्जी की उत्पत्ति छत्तीसगढ़ की ग्रामीण और आदिवासी संस्कृति में है, जहाँ कोलोकैसिया की जड़ें और पत्तियाँ पारंपरिक भोजन का हिस्सा रही हैं। यह व्यंजन उन समुदायों द्वारा बनाया जाता था जो मौसमी और स्थानीय सामग्री पर निर्भर थे। जिमीकंद विशेष रूप से मानसून और सर्दियों के मौसम में खाया जाता है, जब यह ताजा और प्रचुर मात्रा में उपलब्ध होता है। यह छत्तीसगढ़ी थाली का एक महत्वपूर्ण हिस्सा है और पारंपरिक भोजनों में शामिल किया जाता है।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">जिमीकंद सब्जी (लगभग 100 ग्राम, पकाई हुई) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 80-100 किलो कैलोरी (तेल की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 15-18 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 1-2 ग्राम</li>
+                                <li><strong>फैट</strong>: 2-5 ग्राम (तेल के उपयोग पर निर्भर)</li>
+                                <li><strong>विटामिन्स</strong>: विटामिन C और B6</li>
+                                <li><strong>खनिज</strong>: पोटैशियम, मैग्नीशियम, और आयरन</li>
+                            </ul>
+                            <p class="card-text">जिमीकंद में फाइबर और पोषक तत्व इसे एक स्वास्थ्यवर्धक विकल्प बनाते हैं।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>पाचन में सहायक</strong>: उच्च फाइबर सामग्री पाचन तंत्र को स्वस्थ रखती है।</li>
+                                <li><strong>हृदय स्वास्थ्य</strong>: पोटैशियम रक्तचाप को नियंत्रित करने में मदद करता है।</li>
+                                <li><strong>ऊर्जा प्रदान करता है</strong>: कार्बोहाइड्रेट का अच्छा स्रोत, जो ऊर्जा देता है।</li>
+                                <li><strong>प्रतिरक्षा बढ़ाए</strong>: विटामिन C प्रतिरक्षा प्रणाली को मजबूत करता है।</li>
+                                <li><strong>स्थानीय और टिकाऊ</strong>: स्थानीय रूप से उगने वाला जिमीकंद पर्यावरण के अनुकूल है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> जिमीकंद, प्याज, टमाटर, लहसुन, सरसों का तेल, मसाले।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> जिमीकंद को उबालकर काट लें। तेल में प्याज, लहसुन, और टमाटर भूनें। मसाले और जिमीकंद डालकर पकाएँ।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी जिमीकंद सब्जी रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>जिमीकंद (कोलोकैसिया जड़) – 250 ग्राम</li>
+                        <li>प्याज – 1 मध्यम, बारीक कटा हुआ</li>
+                        <li>टमाटर – 1 मध्यम, बारीक कटा हुआ</li>
+                        <li>लहसुन – 4-5 कलियाँ, बारीक कटी हुई या पेस्ट</li>
+                        <li>हरी मिर्च – 1-2, बारीक कटी हुई</li>
+                        <li>सरसों का तेल – 2-3 चम्मच</li>
+                        <li>सरसों के दाने – 1 चम्मच</li>
+                        <li>हल्दी पाउडर – 1/2 चम्मच</li>
+                        <li>लाल मिर्च पाउडर – स्वादानुसार</li>
+                        <li>धनिया पाउडर – 1 चम्मच</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>हरा धनिया – गार्निश के लिए, बारीक कटा हुआ</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>जिमीकंद तैयार करें</strong>: जिमीकंद को अच्छी तरह धोकर छील लें। इन्हें छोटे टुकड़ों में काटें और नमक वाले पानी में 10-15 मिनट तक उबाल लें। पानी निकालकर अलग रखें।</li>
+                        <li><strong>तेल गरम करें</strong>: एक कड़ाही में सरसों का तेल गरम करें। इसमें सरसों के दाने डालें और उनके चटकने का इंतजार करें।</li>
+                        <li><strong>प्याज और लहसुन भूनें</strong>: कटा हुआ प्याज, लहसुन, और हरी मिर्च डालें। प्याज को सुनहरा होने तक भूनें।</li>
+                        <li><strong>टमाटर और मसाले डालें</strong>: कटा हुआ टमाटर, हल्दी पाउडर, लाल मिर्च पाउडर, धनिया पाउडर, और नमक डालें। टमाटर के नरम होने और मसाले के तेल छोड़ने तक पकाएँ।</li>
+                        <li><strong>जिमीकंद पकाएँ</strong>: उबले हुए जिमीकंद के टुकड़े डालें। अच्छी तरह मिलाएँ और मध्यम आँच पर 5-7 मिनट तक पकाएँ, ताकि मसाले जिमीकंद में समा जाएँ। यदि जरूरी हो, तो थोड़ा पानी डालें।</li>
+                        <li><strong>परोसें</strong>: हरे धनिया से सजाएँ और गरमागरम चावल या रोटी के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+       document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        // अगर href में # नहीं है, तो डिफ़ॉल्ट व्यवहार (पेज नेविगेशन) होगा
+    });
+});
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>
