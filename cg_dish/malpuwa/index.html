@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी मिठाई - मालपुआ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी मालपुआ</h1>
+            <p class="lead">एक स्वादिष्ट और पारंपरिक मिठाई</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://swatisani.net/kitchen/wp-content/uploads/2015/10/IMG_9377.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी मालपुआ">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">मालपुआ छत्तीसगढ़ की एक लोकप्रिय और स्वादिष्ट मिठाई है, जो विशेष रूप से त्योहारों और उत्सवों के दौरान बनाई जाती है। यह गेहूं के आटे, चीनी, और दूध से बना एक मीठा पैनकेक है, जिसे घी में तला जाता है और फिर चाशनी में डुबोया जाता है। मालपुआ का स्वाद और बनावट इसे छत्तीसगढ़ी भोजन का एक विशेष हिस्सा बनाता है। इसे अक्सर रबड़ी या सूखे मेवों के साथ परोसा जाता है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">मालपुआ की उत्पत्ति भारतीय उपमहाद्वीप में प्राचीन काल से मानी जाती है, और छत्तीसगढ़ में यह स्थानीय सामग्री और स्वाद के साथ बनाया जाता है। यह मिठाई विशेष रूप से होली, दीवाली, और अन्य त्योहारों में लोकप्रिय है। छत्तीसगढ़ के ग्रामीण क्षेत्रों में, मालपुआ को पारंपरिक रूप से घरेलू सामग्री जैसे चावल का आटा या गेहूं का आटा और गुड़ के साथ बनाया जाता था, जो इसे एक टिकाऊ और सस्ती मिठाई बनाता है।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">मालपुआ (लगभग 100 ग्राम, चाशनी के साथ) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 250-300 किलो कैलोरी (घी और चाशनी की मात्रा पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 35-40 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 3-5 ग्राम</li>
+                                <li><strong>फैट</strong>: 10-15 ग्राम (घी के उपयोग पर निर्भर)</li>
+                                <li><strong>विटामिन्स</strong>: दूध से विटामिन B और D की थोड़ी मात्रा</li>
+                                <li><strong>खनिज</strong>: कैल्शियम (दूध और मेवों से)</li>
+                            </ul>
+                            <p class="card-text">मालपुआ एक उच्च ऊर्जा वाली मिठाई है, जो विशेष अवसरों के लिए उपयुक्त है।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>ऊर्जा का स्रोत</strong>: उच्च कार्बोहाइड्रेट और फैट सामग्री तुरंत ऊर्जा प्रदान करती है।</li>
+                                <li><strong>पारंपरिक सामग्री</strong>: स्थानीय सामग्री जैसे गुड़ और दूध का उपयोग स्वास्थ्यवर्धक हो सकता है।</li>
+                                <li><strong>सांस्कृतिक महत्व</strong>: त्योहारों और उत्सवों में सामाजिक और सांस्कृतिक एकता को बढ़ावा देता है।</li>
+                                <li><strong>स्वादिष्ट</strong>: इसका अनूठा स्वाद सभी उम्र के लोगों को पसंद आता है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> गेहूं का आटा, दूध, चीनी, घी, इलायची, केसर, मेवे।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> आटे और दूध से घोल तैयार करें। घी में मालपुआ तलें और चाशनी में डुबोएँ। मेवों से सजाएँ।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी मालपुआ रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li>गेहूं का आटा – 1 कप</li>
+                        <li>दूध – 1.5 कप</li>
+                        <li>चीनी – 1 कप (चाशनी के लिए)</li>
+                        <li>पानी – 1/2 कप (चाशनी के लिए)</li>
+                        <li>घी – तलने के लिए</li>
+                        <li>इलायची पाउडर – 1/2 चम्मच</li>
+                        <li>केसर – 4-5 धागे (वैकल्पिक)</li>
+                        <li>बादाम और पिस्ता – बारीक कटे, सजाने के लिए</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>घोल तैयार करें</strong>: एक कटोरे में गेहूं का आटा, दूध, और इलायची पाउडर मिलाकर गाढ़ा घोल बनाएं। केसर डालें यदि उपयोग कर रहे हैं। घोल को 15-20 मिनट तक रखें।</li>
+                        <li><strong>चाशनी बनाएं</strong>: एक पैन में चीनी और पानी मिलाकर मध्यम आंच पर गाढ़ी चाशनी (एक तार की) बनाएं। इलायची पाउडर डालें और गर्म रखें।</li>
+                        <li><strong>मालपुआ तलें</strong>: एक कड़ाही में घी गरम करें। घोल को छोटे-छोटे हिस्सों में डालकर गोल पैनकेक बनाएं और सुनहरा होने तक तलें।</li>
+                        <li><strong>चाशनी में डुबोएं</strong>: तले हुए मालपुआ को गरम चाशनी में 1-2 मिनट के लिए डुबोएं।</li>
+                        <li><strong>सजाएं और परोसें</strong>: मालपुआ को निकालकर एक प्लेट में रखें और कटे हुए बादाम-पिस्ता से सजाएं। गरमागरम या रबड़ी के साथ परोसें।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>
