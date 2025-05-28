@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>छत्तीसगढ़ी व्यंजन - फल्का</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE8C2 100%);
+            padding-top: 80px;
+            color: #2C1A05;
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            box-shadow: 0 2px 5px rgba(0, 0,0.2);
+            transition: background-color 0.3 ease;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #FFD700 !important;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #FFE4B5 !important;
+        }
+
+        .nav-link {
+            color: #FFF !important;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #D4A373;
+            color: #2C1A05 !important;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            height: 60vh;
+            background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            color: #FFF;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #2C1A05;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #D4A373;
+            border-color: #D4A373;
+            transform: scale(1.05);
+        }
+
+        .food-details .card {
+            border: none;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-md-4 img {
+            width: 100%;
+        }
+
+        .food-details .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .rounded-custom {
+            border-radius: 20px !important;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C0A;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .card-text strong {
+            color: #4A2C0A;
+        }
+
+        .card ul, .card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card ul li, .card ol li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: linear-gradient(to right, #5B3A1C, #3A2208);
+            color: #FFF;
+            padding: 30px 0;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #D4A373;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card-title { font-size: 1.5rem; }
+            .card-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">छत्तीसगढ़ी भोजन</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">संपर्क</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="display-4">छत्तीसगढ़ी फल्का</h1>
+            <p class="lead">एक पारंपरिक और स्वादिष्ट भाप में पका व्यंजन</p>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">रेसिपी देखें</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="food-details">
+            <div class="card shadow-sm rounded-custom">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://img-global.cpcdn.com/recipes/9e504255514d36f6/680x482cq70/methi-falka-recipe-main-photo.jpg" class="img-fluid rounded-custom" alt="छत्तीसगढ़ी फल्का">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2 class="card-title">परिचय</h2>
+                            <p class="card-text">फल्का, जिसे फरा के नाम से भी जाना जाता है, छत्तीसगढ़ का एक पारंपरिक और स्वादिष्ट व्यंजन है। यह चावल के आटे से बने डंपलिंग हैं, जिनमें मसालेदार उड़द दाल या सब्जियों की स्टफिंग की जाती है और फिर भाप में पकाया जाता है। फल्का का नरम और चटपटा स्वाद इसे छत्तीसगढ़ी घरों में लोकप्रिय बनाता है। इसे आमतौर पर हरी चटनी, टमाटर की चटनी, या तेल में तड़के के साथ परोसा जाता है।</p>
+
+                            <h2 class="card-title">इतिहास</h2>
+                            <p class="card-text">फल्का की उत्पत्ति छत्तीसगढ़ की ग्रामीण और आदिवासी संस्कृति में है, जहाँ चावल और दालें प्रमुख खाद्य सामग्री थीं। यह व्यंजन पारंपरिक रूप से त्योहारों, जैसे तीज और हरेली, या विशेष अवसरों पर बनाया जाता था। भाप में पकाने की तकनीक इसे हल्का और पौष्टिक बनाती है। समय के साथ, फल्का छत्तीसगढ़ी व्यंजनों का एक अभिन्न हिस्सा बन गया और आज यह ग्रामीण और शहरी दोनों क्षेत्रों में प्रिय है।</p>
+
+                            <h2 class="card-title">पोषण संबंधी जानकारी</h2>
+                            <p class="card-text">फल्का (लगभग 100 ग्राम, भाप में पका हुआ) में निम्नलिखित पोषक तत्व होते हैं:</p>
+                            <ul class="card-text">
+                                <li><strong>कैलोरी</strong>: 150-180 किलो कैलोरी (स्टफिंग और तेल पर निर्भर)</li>
+                                <li><strong>कार्बोहाइड्रेट</strong>: 25-30 ग्राम</li>
+                                <li><strong>प्रोटीन</strong>: 5-7 ग्राम (दाल से)</li>
+                                <li><strong>फैट</strong>: 2-4 ग्राम (तेल या तड़के पर निर्भर)</li>
+                                <li><strong>विटामिन्स</strong>: विटामिन B (दाल से)</li>
+                                <li><strong>खनिज</strong>: आयरन और मैग्नीशियम</li>
+                            </ul>
+                            <p class="card-text">फल्का एक पौष्टिक और हल्का व्यंजन है, जो स्वास्थ्य के लिए लाभकारी है।</p>
+
+                            <h2 class="card-title">फायदे</h2>
+                            <ul class="card-text">
+                                <li><strong>प्रोटीन का स्रोत</strong>: उड़द दाल से प्राप्त प्रोटीन मांसपेशियों और ऊर्जा के लिए फायदेमंद है।</li>
+                                <li><strong>पाचन में सहायक</strong>: भाप में पकाने की प्रक्रिया इसे हल्का और पचाने में आसान बनाती है।</li>
+                                <li><strong>कम वसा</strong>: तेल का न्यूनतम उपयोग इसे स्वास्थ्यवर्धक बनाता है।</li>
+                                <li><strong>स्थानीय सामग्री</strong>: चावल और दाल का उपयोग पर्यावरण के अनुकूल और सस्ता है।</li>
+                                <li><strong>सांस्कृतिक महत्व</strong>: त्योहारों और समारोहों में सामाजिक एकता को बढ़ावा देता है।</li>
+                            </ul>
+
+                            <h2 class="card-title">रेसिपी</h2>
+                            <p class="card-text"><strong>सामग्री:</strong> चावल का आटा, उड़द दाल, मसाले, हरी चटनी, तेल।</p>
+                            <p class="card-text"><strong>संक्षिप्त विधि:</strong> उड़द दाल की स्टफिंग तैयार करें। चावल के आटे से डंपलिंग बनाएं, स्टफिंग भरें, और भाप में पकाएं। चटनी के साथ परोसें।</p>
+                            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#recipeModal">विस्तृत रेसिपी देखें</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel">छत्तीसगढ़ी फल्का रेसिपी</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3>सामग्री</h3>
+                    <ul>
+                        <li><strong>आवरण के लिए:</strong></li>
+                        <li>चावल का आटा – 2 कप</li>
+                        <li>नमक – 1/2 चम्मच</li>
+                        <li>पानी – आवश्यकतानुसार (आटा गूंथने के लिए)</li>
+                        <li><strong>स्टफिंग के लिए:</strong></li>
+                        <li>उड़द दाल – 1 कप, 4-5 घंटे भिगोई हुई</li>
+                        <li>हरी मिर्च – 2, बारीक कटी</li>
+                        <li>लहसुन – 4-5 कलियाँ, बारीक कटी</li>
+                        <li>जीरा – 1/2 चम्मच</li>
+                        <li>धनिया पाउडर – 1 चम्मच</li>
+                        <li>नमक – स्वादानुसार</li>
+                        <li>तेल – 1 चम्मच (भूनने के लिए)</li>
+                        <li><strong>परोसने के लिए:</strong></li>
+                        <li>हरी चटनी या टमाटर की चटनी</li>
+                        <li>तेल या घी – तड़के के लिए (वैकल्पिक)</li>
+                    </ul>
+                    <h3>विधि</h3>
+                    <ol>
+                        <li><strong>स्टफिंग तैयार करें</strong>: भिगोई हुई उड़द दाल को पानी निथारकर मोटा पीस लें। एक कड़ाही में 1 चम्मच तेल गरम करें, जीरा डालें, फिर पिसी दाल, हरी मिर्च, लहसुन, धनिया पाउडर, और नमक डालकर 5-7 मिनट तक भूनें। ठंडा होने दें।</li>
+                        <li><strong>आटा गूंथें</strong>: एक कटोरे में चावल का आटा और नमक मिलाएं। गर्म पानी डालकर नरम आटा गूंथें। ढककर 10 मिनट रखें।</li>
+                        <li><strong>फल्का बनाएं</strong>: आटे की छोटी-छोटी लोइयां बनाएं। प्रत्येक लोई को गोल बेलें, बीच में 1-2 चम्मच स्टफिंग रखें, और किनारों को मोड़कर बंद करें।</li>
+                        <li><strong>भाप में पकाएं</strong>: एक स्टीमर में पानी उबालें। फल्का को चिकनाई लगी प्लेट पर रखें और 15-20 मिनट तक भाप में पकाएं।</li>
+                        <li><strong>परोसें</strong>: गरम फल्का को हरी चटनी या टमाटर की चटनी के साथ परोसें। वैकल्पिक रूप से, तेल या घी में हल्का तड़का देकर भी परोस सकते हैं।</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">बंद करें</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center py-3">
+        <div class="container">
+            <p>ABVP NEC - 2025</p><br>
+            <p>भोजन गठ</p>
+            <div class="social-links mb-2">
+                <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.style.background = window.scrollY > 50 
+                ? 'linear-gradient(to right, #4A2C0A, #2C1A05)'
+                : 'linear-gradient(to right, #5B3A1C, #3A2208)';
+        });
+    </script>
+</body>
+</html>
